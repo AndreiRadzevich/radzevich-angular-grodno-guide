@@ -40,35 +40,57 @@ body {
 
 .header {
   background-color: #000;
-  height: 80px;
-  top: 0;
   position: relative;
 }
 
 .navigation {
-  padding: 5px 0;
-  display: none;
+  /*padding: 5px 0;*/
 }
-.navigation__link {
+.navigation__list {
   position: relative;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  height: 80px;
 }
-
-.button--sign {
-  background-color: transparent;
-  border: none;
-  padding: 15px 10%;
-  display: block;
-  font-size: 13px;
-  letter-spacing: .5px;
-  text-transform: uppercase;
-  color: #fff;
+.navigation__link{
+  margin-right: 20px;
 }
-
+.btn{
+  border: 1px solid #ffffff;
+  cursor: pointer;
+  margin-left: 10px;
+  border-radius: 3px;
+  padding: 0 13px;
+  height: 32px;
+  font-size: 16px;
+  display: inline-flex;
+  align-items: center;
+  transition: border 0.25s cubic-bezier(0.645, 0.045, 0.355, 1) 0s;
+}
 .navigation a {
   color: #fff;
-  display: block;
+}
+.navigation-item svg:hover {
+  background-color: black;
+  border-radius: 50%;
+}
+.navigation__link a:hover{
   transition: color .15s linear;
 }
+.navigation-item circle, .navigation-item svg:hover {
+  fill: #fff;
+}
+#login {
+  background-color: transparent;
+}
+
+#registration {
+  background-color: #ffffff;
+  color: black;
+}
+
+
 
 
 /*main section*/
@@ -325,23 +347,26 @@ img {
 }
 
 @media screen and (min-width: 640px) {
-  .header {
-    height: 80px;
-  }
+  /*.header {*/
+
+  /*}*/
   .navigation {
     display: block;
     padding: 0;
   }
   .navigation__list {
-    display: -ms-flexbox;
     display: flex;
-    -ms-flex-pack: end;
     justify-content: flex-end;
+    align-items: center;
+    height: 80px;
   }
-  .button--sign {
+  .navigation__link{
+    margin-right: 20px;
+  }
+   .button--sign {
     height: 28px;
     padding: 7px 44px 3px 24px;
-    border-right: 1px solid #494746;
+    border: 1px solid #494746;
     transition: color .15s linear;
   }
   .wallpaper {
