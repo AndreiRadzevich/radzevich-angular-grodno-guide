@@ -1,6 +1,4 @@
-let configuration: { menu: ({ link: string; id: number; filters: string[]; title: string } | { link: string; id: number;
-title: string } | { link: string; id: number; title: string; outlet: string })[] };
-configuration = {
+ export const configuration = {
   menu: [
     {
       id: 1,
@@ -26,4 +24,18 @@ configuration = {
       link: '/event',
       filters: ['All', 'Exhibitions', 'Music']
     }
-]};
+],
+    pages: [
+     {id: 'eat',
+       description: 'This is',
+     },
+     {id: 'see',
+       description: 'This is',
+     },
+      {id: 'guides',
+        description: 'This is',
+      },
+      {id: 'event',
+       description: 'This is'
+      }]
+ };

@@ -6,7 +6,7 @@ import {Component, Input, OnInit} from '@angular/core';
   styleUrls: ['./filter.component.css']
 })
 export class FilterComponent implements OnInit {
-  @Input() menuItem: any;
+  @Input() filter: any;
 
   constructor() { }
 

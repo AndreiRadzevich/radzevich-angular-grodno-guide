@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { configuration } from '../configuration';
+import { ConfigService } from '../config.service';
 
 @Component({
   selector: 'app-navigation',
@@ -10,14 +12,28 @@ export class NavigationComponent implements OnInit {
   menu: any;
   database = 'menu';
   filterOpen: boolean;
+  currentItem: any;
 
-  constructor() { }
+  constructor( private config: ConfigService) { }
 
   ngOnInit() {
     this.filterOpen = false;
+    this.getMenu();
   }
 
-  toggleFilter(status: boolean) {
-    this.filterOpen = status;
+  toggleFilter(itemMenu: any) {
+    this.filterOpen = true;
+    this.currentItem = itemMenu.filters;
+    console.log(this.currentItem);
+  }
+
+  getMenu() {
+    this.config.getSettings(this.database).subscribe(
+
+      setting => {
+        this.menu = setting;
+        console.log(setting);
+      }
+    );
   }
 }
