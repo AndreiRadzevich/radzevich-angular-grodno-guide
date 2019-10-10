@@ -12,7 +12,10 @@ import { pluck } from 'rxjs/operators';
   styleUrls: ['./main-folder.component.css']
 })
 export class MainFolderComponent {
-  messages: Observable<Content[]> = this.route.data.pipe(pluck('messages'));
-  title: Observable<string> = this.route.params.pipe(pluck('name'));
-  constructor(private route: ActivatedRoute) {}
+  rubrics: Observable<Content[]> = this.route.data.pipe(pluck('rubric'));
+
+  // title: Observable<string> = this.route.params.pipe(pluck('name'));
+  constructor(private route: ActivatedRoute) {
+    console.log('ghgh', route);
+  }
 }

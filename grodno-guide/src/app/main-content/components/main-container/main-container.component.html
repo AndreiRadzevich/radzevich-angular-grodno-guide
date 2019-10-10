@@ -1,2 +1,38 @@
 <div class="grid-container">
+  <app-content-item class="grid-item" *ngFor="let detailItem of details"
+    [detail]="detailItem">
+  </app-content-item>
+  <div class="detail-container detail-container-grid">
+    <div class="detail-item">
+      <div class="detail-item__close">
+        <button class="close-button">
+          <span class="close-icon"></span>
+        </button>
+      </div>
+      <div class="detail-item__block detail-item__block--first">
+        <div class="detail-item__image"><img src="" alt=""></div>
+        <div class="detail-item__body">
+          <h1 class="detail-item__heading">Guides</h1>
+          <div class="detail-item__text">
+            <p>
+              <span>
+              Lorem
+            </span
+            ></p>
+          </div>
+        </div>
+      </div>
+      <div class="detail-item__block detail-item__block--last">
+        <div class="detail-item__body">
+          <h1 class="detail-item__heading">Guides</h1>
+          <div class="detail-item__text">
+            <p>
+              <span>
+              Lorem
+            </span
+            ></p>
+          </div>
+        </div>
+      </div>
   </div>
+</div>

@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 
 import { ActivatedRoute } from '@angular/router';
 
@@ -12,11 +12,16 @@ import { pluck } from 'rxjs/operators';
   templateUrl: './main-container.component.html',
   styleUrls: ['./main-container.component.css']
 })
-export class MainContainerComponent {
+export class MainContainerComponent  implements OnInit {
 
-  message: Observable<Content> = this.route.data.pipe(pluck('message'));
+  details: [] ;
 
   constructor(private route: ActivatedRoute) {
-    console.log('bbbla', this.route)
+    // console.log('bbbla', this.route);
+    // console.log('rrrrrr', this.details);
+  }
+
+  ngOnInit() {
+    this.route.data.pipe(pluck('category')).subscribe(category => this.details = category.details);
   }
 }

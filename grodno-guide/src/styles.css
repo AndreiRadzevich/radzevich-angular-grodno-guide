@@ -197,6 +197,7 @@ svg:not(:root) {
 .filters__item span {
   pointer-events: none;
 }
+
 .grid-item {
   /*background: #ddd;*/
   box-sizing: border-box;
@@ -281,7 +282,7 @@ svg:not(:root) {
   padding-top: 50%;
 }
 .grid-item:nth-of-type(9n+9):before {
-  padding-top: 100%;
+  padding-top: 50%;
 }
 
 .grid-item__title-wrapper {
@@ -311,7 +312,90 @@ svg:not(:root) {
   margin-top: 3px;
   font-family: FuturaBook,Arial,sans-serif;
 }
+/*detail*/
+.detail-container {
+  background-color: #fff;
+  margin: 0 auto;
+  width: 100%;
+  max-width: 100%;
+  display: block;
+  border-bottom: 40px solid #262626;
+}
+.detail-container-grid {
+  max-width: 1550px;
+  float: left;
+}
 
+.detail-container--grid:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+.detail-item__close {
+  background-color: #262626;
+  height: 40px;
+  display: block;
+  width: 100%;
+  float: left;
+}
+.detail-item__close .close-button {
+  background: none;
+  border: none;
+  height: 40px;
+  width: 100%;
+  padding: 0 10px;
+  text-align: right;
+}
+
+.detail-item__close .close-button .close-icon:after {
+  color: #fff;
+  font-family: Icomoon;
+  content: "\E60B";
+}
+
+.detail-item__block {
+  float: left;
+  width: 100%;
+}
+
+.detail-item__block--last {
+  background-color: #e7e8e9;
+  position: relative;
+}
+
+.detail-item__image {
+  width: 100%;
+  position: relative;
+}
+
+.detail-item__image:before {
+  display: block;
+  content: "";
+  float: left;
+  padding-top: 50%;
+}
+
+.detail-item__image img {
+  vertical-align: middle;
+  width: 100%;
+}
+
+img {
+  max-width: 100%;
+}
+
+.detail-item__body {
+  padding: 20px;
+}
+
+.detail-item__heading {
+  margin-bottom: 10px;
+  font-size: 26px;
+  font-size: 1.625rem;
+  line-height: 30px;
+}
+
+/*footer*/
 .footer {
   background-color: #000;
   color: #fff;
@@ -457,6 +541,19 @@ img {
     padding-top: 50%;
   }
 
+  /*detail*/
+  .detail-item__block--first {
+    width: 55%;
+  }
+
+  .detail-item__block--last {
+    width: 45%;
+  }
+  .detail-item__block--last:before {
+    padding-top: 61.11111111%;
+  }
+
+  /*footer*/
   .footer__layout {
     flex-direction: row;
   }

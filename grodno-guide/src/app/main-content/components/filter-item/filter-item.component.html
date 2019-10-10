@@ -1,6 +1,6 @@
 <li class="filters__item">
-  <a [routerLink]="['', { outlets: { pane: ['message', message.id] } }]"
+  <a [routerLink]="['', { outlets: { pane: ['rubric', rubric.category] } }]"
   routerLinkActive="active">
-    <span>{{ message.timestamp | date:'shortTime' }}</span>
+    <span>{{ rubric.category }}</span>
   </a>
 </li>

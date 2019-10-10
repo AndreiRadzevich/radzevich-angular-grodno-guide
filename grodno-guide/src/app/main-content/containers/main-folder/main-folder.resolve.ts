@@ -8,6 +8,6 @@ import { Content } from '../../models/content.interface';
 export class MainFolderResolve implements Resolve<Content[]> {
   constructor(private mainContentService: MainContentService) {}
   resolve(route: ActivatedRouteSnapshot, state: RouterStateSnapshot) {
-    return this.mainContentService.getFolder(route.params.name);
+    return this.mainContentService.getFolder(route.params.name, 'rubrics');
   }
 }

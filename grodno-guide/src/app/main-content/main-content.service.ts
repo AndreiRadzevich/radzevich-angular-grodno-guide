@@ -10,21 +10,13 @@ import { Content } from './models/content.interface';
 export class MainContentService {
   constructor(private http: HttpClient) {}
 
-  getFolder(folder: string): Observable<Content[]> {
+  getFolder(folder: string, endpoint: string): Observable<Content[]> {
     const options = { params: new HttpParams().set('folder', folder) };
 
     return this.http
-      .get(`/api/messages`, options)
+      .get(`/api/${ endpoint }`, options)
       .pipe(
         tap(console.log)
       );
-  }
-
-  getMessage(id: string): Observable<Content> {
-    return this.http
-      .get(`/api/messages/${id}`)
-      .pipe(
-        tap(console.log)
-      );;
   }
 }

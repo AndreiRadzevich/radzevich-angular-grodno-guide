@@ -10,5 +10,5 @@ import { Content } from '../../models/content.interface';
 })
 export class FilterItemComponent  {
   @Input()
-  message: Content;
+  rubric: Content;
 }
