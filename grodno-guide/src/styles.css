@@ -212,6 +212,12 @@ svg:not(:root) {
   background-color: #fff;
   overflow: hidden;
 }
+.grid-item__active {
+
+background: rgb(153, 153, 153);
+  opacity: 0.5;
+}
+
 .grid-container:after {
   content: "";
   display: block;

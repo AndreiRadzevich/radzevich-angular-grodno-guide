@@ -1,36 +1,25 @@
 
 <div id="container">
   <header class="header">
-    <a href="/">
+    <a routerLink="/login" routerLinkActive="active">
       <div class="logo"></div>
     </a>
     <nav class="navigation" role="navigation">
       <ul class="navigation__list">
         <li class="navigation__link">
-          <a href="/">About us</a>
+          <a routerLink="/login" routerLinkActive="active">Sign in</a>
         </li>
         <li class="navigation__link">
-          <a href="/">Contact</a>
-        </li>
-        <li class="navigation__link">
-            <a id="login" class="btn" href="">Sign in</a>
-        </li>
-        <li class="navigation__link">
-          <a id="registration" class="btn" href="">Sign up</a>
+          <a routerLink="/login" routerLinkActive="active">Sign up</a>
         </li>
       </ul>
     </nav>
   </header>
-  <div class="content-wrapper">
-    <div class="wallpaper">
-      <div class="wallpaper_wrapper">
-        <h1 class="wallpaper_title">Welcome to Grodno</h1>
-        <span>for everyone</span>
-      </div>
-    </div>
-    <app-navigation></app-navigation>
-    <app-main></app-main>
-  </div>
+  <router-outlet></router-outlet>
+
+<!--    <app-navigation></app-navigation>-->
+<!--    <app-main></app-main>-->
+<!--  </div>-->
   <footer class="footer">
     <div class="footer__layout">
       <section class="footer-group">

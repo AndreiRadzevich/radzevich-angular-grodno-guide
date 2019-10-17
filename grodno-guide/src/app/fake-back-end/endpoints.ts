@@ -1,6 +1,4 @@
 export default {
-  rubrics: {
-    rubrics: '/api/rubrics',
-    category: '/api/category'
-  }
+    rubrics: '/api/rubric',
+    details: '/api/details'
 };

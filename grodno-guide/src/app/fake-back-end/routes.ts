@@ -1,12 +1,12 @@
-import { error, ok, sendJSON } from './helpers';
-import { HttpEvent, HttpHandler, HttpInterceptor, HttpRequest } from '@angular/common/http';
+import { ok } from './helpers';
 
 import { rubrics } from './data/rubrics';
+import { details } from './data/rubrics';
 
-export function getRubric(folder) {
-  return ok(rubrics.filter(rubric => rubric.folder === folder));
+export function getRubric() {
+  return ok(rubrics);
 }
 
-export function getCategory(folder) {
-  return ok(rubrics.find(rubric => rubric.category === folder));
+export function getFolder(rubric) {
+  return ok(details.filter(detail => detail.rubric === rubric)[0]);
 }

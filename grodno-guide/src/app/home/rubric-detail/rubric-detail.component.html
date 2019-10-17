@@ -1,0 +1,16 @@
+<nav class="filter-navigation-wrapper">
+  <ul class="filters">
+    <app-filter-item *ngFor="let filterItem of details.filters"
+    [filter]="filterItem" (click)="getFilter(filterItem)">
+    </app-filter-item>
+  </ul>
+</nav>
+<div>
+  <div class="grid-container" *ngFor="let item of ['','']">
+    <app-content-item class="grid-item" *ngFor="let detailItem of filterDetails"
+    [detail]="detailItem" [class.grid-item__active]="selectedItem === detailItem"
+    (click)="getStore(detailItem)">
+    </app-content-item>
+    <app-detail-content [hidden]="detailOpen" [detailInfo]="selectedItem"></app-detail-content>
+  </div>
+</div>

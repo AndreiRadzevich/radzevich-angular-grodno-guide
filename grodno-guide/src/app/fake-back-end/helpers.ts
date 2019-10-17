@@ -11,6 +11,7 @@ export function error(errors: any) {
 }
 
 export function ok<T>(data?: T) {
+  console.log(data);
   return of(
     new HttpResponse({
       status: 200,

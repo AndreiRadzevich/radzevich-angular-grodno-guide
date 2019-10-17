@@ -1,7 +1,4 @@
 import { Component, Input } from '@angular/core';
-import { Router } from '@angular/router';
-
-import { Content } from '../../models/content.interface';
 
 @Component({
   selector: 'app-filter-item',
@@ -10,5 +7,5 @@ import { Content } from '../../models/content.interface';
 })
 export class FilterItemComponent  {
   @Input()
-  rubric: Content;
+  filter: string;
 }

@@ -6,7 +6,8 @@ import { delay, dematerialize, materialize, mergeMap } from 'rxjs/operators';
 import endpoints from './endpoints';
 import { checkUrl } from './helpers';
 import {
-  getRubric, getCategory
+  getRubric,
+  getFolder
 } from './routes';
 
 @Injectable()
@@ -25,10 +26,12 @@ export class FakeBackendInterceptor implements HttpInterceptor {
 
     function handleRoute() {
       switch (true) {
-        case checkUrl(request, endpoints.rubrics.rubrics):
-          return getRubric(request.params.get('folder'));
-        case checkUrl(request, endpoints.rubrics.category):
-          return getCategory(request.params.get('folder'));
+        case checkUrl(request, endpoints.rubrics):
+          return getRubric();
+        case checkUrl(request, endpoints.details):
+          const rubric = request.params.get('rubric');
+          console.log(rubric);
+          return getFolder(rubric);
         default:
           return next.handle(request);
       }

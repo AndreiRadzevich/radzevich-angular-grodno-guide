@@ -1,20 +1,20 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { MainAppComponent } from './main-app.component';
+import { RubricListComponent } from './rubric-list.component';
 
-describe('MainAppComponent', () => {
-  let component: MainAppComponent;
-  let fixture: ComponentFixture<MainAppComponent>;
+describe('RubricListComponent', () => {
+  let component: RubricListComponent;
+  let fixture: ComponentFixture<RubricListComponent>;
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ MainAppComponent ]
+      declarations: [ RubricListComponent ]
     })
     .compileComponents();
   }));
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(MainAppComponent);
+    fixture = TestBed.createComponent(RubricListComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

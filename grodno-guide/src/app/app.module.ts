@@ -1,31 +1,27 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
-import { RouterModule, Routes } from '@angular/router';
-import { Router } from '@angular/router';
+import { FormsModule } from '@angular/forms';
 
 import { FakeBackendInterceptor } from './fake-back-end/fake-back-end.interceptor';
-import { MainContentModule } from './main-content/main-content.module';
 
+import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { SvgBlockComponent } from './components/navigation/svg-block/svg-block.component';
-import { NavigationComponent } from './components/navigation/navigation.component';
-
-export const ROUTES: Routes = [
-  { path: '**', redirectTo: 'folder/eat' }
-];
+import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
+import { HomeModule } from './home/home.module';
 
 @NgModule({
   imports: [
     BrowserModule,
     HttpClientModule,
-    MainContentModule,
-    RouterModule.forRoot(ROUTES)
+    FormsModule,
+    AppRoutingModule,
+    HomeModule
   ],
   declarations: [
     AppComponent,
-    NavigationComponent,
-    SvgBlockComponent
+    PageNotFoundComponent
+
   ],
   bootstrap: [ AppComponent ],
   providers: [

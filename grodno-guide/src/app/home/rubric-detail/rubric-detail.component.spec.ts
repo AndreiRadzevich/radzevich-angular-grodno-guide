@@ -1,20 +1,20 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { MainFolderComponent } from './main-folder.component';
+import { RubricDetailComponent } from './rubric-detail.component';
 
-describe('MainFolderComponent', () => {
-  let component: MainFolderComponent;
-  let fixture: ComponentFixture<MainFolderComponent>;
+describe('RubricDetailComponent', () => {
+  let component: RubricDetailComponent;
+  let fixture: ComponentFixture<RubricDetailComponent>;
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ MainFolderComponent ]
+      declarations: [ RubricDetailComponent ]
     })
     .compileComponents();
   }));
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(MainFolderComponent);
+    fixture = TestBed.createComponent(RubricDetailComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });
