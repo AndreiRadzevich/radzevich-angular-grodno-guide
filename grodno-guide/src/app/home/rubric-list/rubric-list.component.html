@@ -9,7 +9,7 @@
     <ul class="filter-navigation">
       <li class="navigation-item" *ngFor="let rubricItem of rubrics$ | async">
         <a [routerLink]="[rubricItem.rubric]"
-           routerLinkActive="active">
+           routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}">
           <app-svg-block [rubric]="rubricItem.rubric"></app-svg-block>
         </a>
       </li>

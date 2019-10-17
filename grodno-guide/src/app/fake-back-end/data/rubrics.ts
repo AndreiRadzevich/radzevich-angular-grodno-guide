@@ -7,11 +7,11 @@ export const details = [
         'title': 'Jane Smith',
         'description': 'blablabla',
       },{
-        'image': 'passdgjgjhgfjgh',
+        'image': 'Restaurantsdgjgjhgfjgh',
         'title': 'Андрей',
         'description': 'рыварпаврвр',
       },{
-        'image': 'passdgjgjhgfjgh',
+        'image': 'Restaurantsdgjgjhgfjgh',
         'title': 'Сергей',
         'description': 'апврпарррррррр рррррррррррр ррррррррррррр',
       },{
@@ -19,7 +19,7 @@ export const details = [
         'title': 'Jane',
         'description': 'blablabla',
       },{
-        'image': 'passdgjgjhgfjgh',
+        'image': 'Cafesgjgjhgfjgh',
         'title': 'Jane',
         'description': 'blablabla',
       },{
@@ -31,11 +31,11 @@ export const details = [
           'title': 'Jane',
           'description': 'blablabla',
         },{
-        'image': 'cafevcmbmnbbmm',
+        'image': 'Cafescmbmnbbmm',
         'title': 'Jane',
         'description': 'blablabla',
       },{
-        'image': 'cafevcmbmnbbmm',
+        'image': 'Cafescmbmnbbmm',
         'title': 'Jane',
         'description': 'blablabla',
       }]

@@ -9,7 +9,6 @@ import { Detail } from '../../../models/detail.interface';
 export class ContentItemComponent {
   @Input()
   detail: any;
-
   @Input()
   detailOpen: boolean;
 

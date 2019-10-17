@@ -1,10 +1,12 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, OnInit} from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 
 import { Detail } from '../../models/detail.interface';
+import {Details} from '../../models/det.interface';
 
 import { pluck } from 'rxjs/operators';
 import {DetailService} from './detail.service';
+
 
 @Component({
   selector: 'app-rubric-detail',
@@ -15,15 +17,20 @@ export class RubricDetailComponent implements OnInit  {
   details: Detail;
   detailOpen: boolean = true;
   selectedItem: any = '';
-  filterDetails: [];
+  filterDetails: any[];
+  stop: number = 2;
+  filterState: string;
+
   constructor(private route: ActivatedRoute, private detailService: DetailService) {}
 
   ngOnInit() {
     this.route.data.pipe(pluck('details'))
     .subscribe(
       detail => {
+        this.filterState = detail.filters[0];
         this.details = detail;
-        this.filterDetails = detail.details.filter((item) => item.image.startsWith('pass'));
+        this.detailOpen = true;
+        this.filterDetails = detail.details.filter((item) => item.image.startsWith('Restaurants'));
       }
     );
   }
@@ -38,13 +45,15 @@ export class RubricDetailComponent implements OnInit  {
     }
   }
     getFilter(filter) {
-      this.route.data.pipe(pluck('details'))
-        .subscribe(
-          detail => {
-            this.details = detail;
-            this.filterDetails = detail.details.filter((item) => item.image.startsWith(filter));
-          }
-        );
+    this.filterState = filter;
+    this.detailOpen = true;
+    this.stop = 2;
+    this.filterDetails = this.details.details.filter((item: Details) => item.image.startsWith(filter)).slice(0, this.stop);
     }
+
+    showMore() {
+    this.stop += 1;
+    this.filterDetails = this.details.details.filter((item: Details) => item.image.startsWith(this.filterState)).slice(0, this.stop);
+  }
   }
 

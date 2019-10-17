@@ -10,6 +10,7 @@ export class DetailContentComponent implements OnInit {
   @Input()
   detailInfo: any = '';
 
+
   constructor() { }
 
   ngOnInit() {

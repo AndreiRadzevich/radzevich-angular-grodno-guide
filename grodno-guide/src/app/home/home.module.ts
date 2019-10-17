@@ -9,6 +9,7 @@ import {FilterItemComponent} from './rubric-detail/filter-item/filter-item.compo
 import {SvgBlockComponent} from './rubric-list/svg-block/svg-block.component';
 import {DetailContentComponent} from './rubric-detail/detail-content/detail-content.component';
 import {ContentItemComponent} from './rubric-detail/content-item/content-item.component';
+import { BottonShowMoreComponent } from './botton-show-more/botton-show-more.component';
 
 @NgModule({
   declarations: [
@@ -17,7 +18,8 @@ import {ContentItemComponent} from './rubric-detail/content-item/content-item.co
   FilterItemComponent,
   SvgBlockComponent,
   DetailContentComponent,
-  ContentItemComponent
+  ContentItemComponent,
+  BottonShowMoreComponent
   ],
   imports: [
     CommonModule,
