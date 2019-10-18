@@ -326,6 +326,9 @@ background: rgb(153, 153, 153);
   max-width: 100%;
   display: block;
   border-bottom: 40px solid #262626;
+  height: 100%;
+  scroll: auto;
+
 }
 .detail-container-grid {
   max-width: 1550px;

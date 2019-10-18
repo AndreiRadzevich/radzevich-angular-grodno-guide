@@ -9,6 +9,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
 import { HomeModule } from './home/home.module';
+import { AuthModule } from './auth/auth.module';
 
 @NgModule({
   imports: [
@@ -16,7 +17,8 @@ import { HomeModule } from './home/home.module';
     HttpClientModule,
     FormsModule,
     AppRoutingModule,
-    HomeModule
+    HomeModule,
+    AuthModule
   ],
   declarations: [
     AppComponent,

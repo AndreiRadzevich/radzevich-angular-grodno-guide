@@ -1,4 +1,4 @@
-import {Component, OnInit} from '@angular/core';
+import {Component, OnInit, ElementRef, ContentChild} from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 
 import { Detail } from '../../models/detail.interface';
@@ -6,7 +6,6 @@ import {Details} from '../../models/det.interface';
 
 import { pluck } from 'rxjs/operators';
 import {DetailService} from './detail.service';
-
 
 @Component({
   selector: 'app-rubric-detail',
@@ -18,8 +17,10 @@ export class RubricDetailComponent implements OnInit  {
   detailOpen: boolean = true;
   selectedItem: any = '';
   filterDetails: any[];
-  stop: number = 2;
+  stop: number = 9;
   filterState: string;
+
+
 
   constructor(private route: ActivatedRoute, private detailService: DetailService) {}
 
@@ -30,7 +31,8 @@ export class RubricDetailComponent implements OnInit  {
         this.filterState = detail.filters[0];
         this.details = detail;
         this.detailOpen = true;
-        this.filterDetails = detail.details.filter((item) => item.image.startsWith('Restaurants'));
+        console.log(this.route.data);
+        this.filterDetails = detail.details.filter((item) => item.image.startsWith('Rest'));
       }
     );
   }
@@ -43,17 +45,19 @@ export class RubricDetailComponent implements OnInit  {
       this.selectedItem = item;
       this.detailOpen = false;
     }
+
   }
+
     getFilter(filter) {
     this.filterState = filter;
     this.detailOpen = true;
-    this.stop = 2;
+    this.stop = 9;
     this.filterDetails = this.details.details.filter((item: Details) => item.image.startsWith(filter)).slice(0, this.stop);
     }
 
     showMore() {
-    this.stop += 1;
+    this.stop += 9;
     this.filterDetails = this.details.details.filter((item: Details) => item.image.startsWith(this.filterState)).slice(0, this.stop);
-  }
+    }
   }
 

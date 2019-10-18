@@ -19,6 +19,26 @@ export const details = [
         'title': 'Jane',
         'description': 'blablabla',
       },{
+        'image': 'Restaurantsdgjgjhgfjgh',
+        'title': 'Jane',
+        'description': 'blablabla',
+      },{
+        'image': 'Restaurantsdgjgjhgfjgh',
+        'title': 'Jane',
+        'description': 'blablabla',
+      },{
+        'image': 'Restaurantsdgjgjhgfjgh',
+        'title': 'Jane',
+        'description': 'blablabla',
+      },{
+        'image': 'Restaurantsdgjgjhgfjgh',
+        'title': 'Jane',
+        'description': 'blablabla',
+      },{
+        'image': 'Restaurantsdgjgjhgfjgh',
+        'title': 'Jane',
+        'description': 'blablabla',
+      },{
         'image': 'Cafesgjgjhgfjgh',
         'title': 'Jane',
         'description': 'blablabla',
@@ -35,6 +55,59 @@ export const details = [
         'title': 'Jane',
         'description': 'blablabla',
       },{
+        'image': 'Cafesgjgjhgfjgh',
+        'title': 'Jane',
+        'description': 'blablabla',
+      },{
+        'image': 'Cafesgjgjhgfjgh',
+        'title': 'Jane',
+        'description': 'blablabla',
+      },{
+        'image': 'Cafesgjgjhgfjgh',
+        'title': 'Jane',
+        'description': 'blablabla',
+      },{
+        'image': 'Cafesgjgjhgfjgh',
+        'title': 'Jane',
+        'description': 'blablabla',
+      },{
+        'image': 'Cafesgjgjhgfjgh',
+        'title': 'Jane',
+        'description': 'blablabla',
+      },{
+        'image': 'Cafesgjgjhgfjgh',
+        'title': 'Jane',
+        'description': 'blablabla',
+      },{
+        'image': 'Cafesgjgjhgfjgh',
+        'title': 'Jane',
+        'description': 'blablabla',
+      },{
+        'image': 'Cafesgjgjhgfjgh',
+        'title': 'Jane',
+        'description': 'blablabla',
+      },{
+        'image': 'Cafesgjgjhgfjgh',
+        'title': 'Jane',
+        'description': 'blablabla',
+      },{
+        'image': 'Cafesgjgjhgfjgh',
+        'title': 'Jane',
+        'description': 'blablabla',
+      },{
+        'image': 'Cafesgjgjhgfjgh',
+        'title': 'Jane',
+        'description': 'blablabla',
+      },{
+        'image': 'Cafesgjgjhgfjgh',
+        'title': 'Jane',
+        'description': 'blablabla',
+      },{
+        'image': 'Cafesgjgjhgfjgh',
+        'title': 'Jane',
+        'description': 'blablabla',
+      },
+        {
         'image': 'Cafescmbmnbbmm',
         'title': 'Jane',
         'description': 'blablabla',
@@ -44,19 +117,94 @@ export const details = [
       'filters': ['Activities', 'Attractions', 'Shopping'],
       'rubric': 'see',
       'details': [{
-        'image': 'Jane Smith',
+        'image': 'Activities',
         'title': 'Jane Smith',
         'description': 'blablabla',
-      }]
+      },{
+          'image': 'Activities',
+          'title': 'Jane Smith',
+          'description': 'blablabla',
+        },{
+        'image': 'Activities',
+        'title': 'Jane Smith',
+        'description': 'blablabla',
+      },{
+        'image': 'Activities',
+        'title': 'Jane Smith',
+        'description': 'blablabla',
+      },{
+        'image': 'Activities',
+        'title': 'Jane Smith',
+        'description': 'blablabla',
+      },{
+        'image': 'Activities',
+        'title': 'Jane Smith',
+        'description': 'blablabla',
+      },{
+        'image': 'Activities',
+        'title': 'Jane Smith',
+        'description': 'blablabla',
+      },{
+        'image': 'Activities',
+        'title': 'Jane Smith',
+        'description': 'blablabla',
+      },{
+        'image': 'Activities',
+        'title': 'Jane Smith',
+        'description': 'blablabla',
+      }
+        ]
     },
    {
     'filters': ['City', 'Nature', 'Region'],
     'rubric': 'guides',
     'details': [{
-      'image': 'Jane Smith',
+      'image': 'City',
       'title': 'Jane Smith',
       'description': 'blablabla',
-    }]
+    },{
+      'image': 'City',
+      'title': 'Jane Smith',
+      'description': 'blablabla',
+    },{
+      'image': 'City',
+      'title': 'Jane Smith',
+      'description': 'blablabla',
+    },{
+      'image': 'City',
+      'title': 'Jane Smith',
+      'description': 'blablabla',
+    },{
+      'image': 'City',
+      'title': 'Jane Smith',
+      'description': 'blablabla',
+    },{
+      'image': 'City',
+      'title': 'Jane Smith',
+      'description': 'blablabla',
+    },{
+      'image': 'City',
+      'title': 'Jane Smith',
+      'description': 'blablabla',
+    },{
+      'image': 'City',
+      'title': 'Jane Smith',
+      'description': 'blablabla',
+    },{
+      'image': 'City',
+      'title': 'Jane Smith',
+      'description': 'blablabla',
+    },{
+      'image': 'City',
+      'title': 'Jane Smith',
+      'description': 'blablabla',
+    },{
+      'image': 'City',
+      'title': 'Jane Smith',
+      'description': 'blablabla',
+    }
+
+    ]
   },
   {
     'filters': ['All', 'Exhibitions', 'Music'],

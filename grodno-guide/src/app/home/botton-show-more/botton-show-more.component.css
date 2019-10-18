@@ -1,0 +1,27 @@
+.show-more {
+  display: block;
+  width: calc(100% - 60px);
+  background-color: #fff;
+  margin: 2em auto 4em;
+  text-align: center;
+  border: 2px solid #262626;
+  padding: 10px 0;
+  max-width: 1430px;
+  font-family: FuturaBold,Arial,sans-serif;
+  font-size: 20;
+  color: #262626;
+  transition: background-color .15s linear,color .15s linear;
+}
+
+.show-more:hover {
+    cursor: pointer;
+    background-color: #262626;
+    color: #fff;
+  }
+
+@media screen and (min-width: 1200px) {
+  .show-more {
+    width: calc(100% - 120px);
+  }
+
+}

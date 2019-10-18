@@ -1,0 +1,39 @@
+<div class="content-wrapper">
+  <div class="wallpaper">
+    <div class="panel-body">
+      <h4 class="text-center"><i class="ion-person-add"></i> Sign up</h4>
+      <form [formGroup]="registerForm" (ngSubmit)="onSubmit()">
+        <div class="form-group">
+          <input type="text" class="form-control form-names input-lg" formControlName="firstName" name="firstName" placeholder="First Name">
+          <input type="text" class="form-control form-names input-lg" formControlName="lastName" name="lastName" placeholder="Last name">
+          <span class="ion-person form-control-icon"></span>
+          <div *ngIf="submitted && f.firstName.errors" class="invalid-feedback">
+            <div *ngIf="f.firstName.errors.required">First Name is required</div>
+          </div>
+          <div *ngIf="submitted && f.lastName.errors" class="invalid-feedback">
+            <div *ngIf="f.lastName.errors.required">Last Name is required</div>
+          </div>
+        </div>
+        <div class="form-group">
+          <input type="text" class="form-control" formControlName="email" name="email" placeholder="Email">
+          <span class="ion-at form-control-icon"></span>
+          <div *ngIf="submitted && f.email.errors" class="invalid-feedback">
+            <div *ngIf="f.email.errors.required">Email is required</div>
+          </div>
+        </div>
+        <div class="form-group">
+          <input type="password" class="form-control" formControlName="password" name="password" placeholder="Password">
+          <span class="ion-key form-control-icon"></span>
+          <div *ngIf="submitted && f.password.errors" class="invalid-feedback">
+            <div *ngIf="f.password.errors.required">Password is required</div>
+            <div *ngIf="f.password.errors.minlength">Password must be at least 6 characters</div>
+          </div>
+        </div>
+        <button type="submit" class="btn btn-block btn-success"> Sign up</button>
+        <p class="text-center">
+          <small>Aleary have an account! <a routerLink="/login"> Login</a></small>
+        </p>
+      </form>
+    </div>
+  </div>
+</div>
