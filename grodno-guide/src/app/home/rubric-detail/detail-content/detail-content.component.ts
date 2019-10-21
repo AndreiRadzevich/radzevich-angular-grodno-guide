@@ -1,4 +1,4 @@
-import {Component, OnInit, Input, ContentChild, ElementRef} from '@angular/core';
+import {Component, OnInit, Input, ContentChild, ElementRef } from '@angular/core';
 
 @Component({
   selector: 'app-detail-content',

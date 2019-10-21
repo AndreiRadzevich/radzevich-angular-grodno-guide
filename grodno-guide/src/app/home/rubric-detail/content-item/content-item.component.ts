@@ -8,16 +8,7 @@ import { Detail } from '../../../models/detail.interface';
 })
 export class ContentItemComponent {
   @Input()
-  detail: any;
-  @Input()
-  detailOpen: boolean;
+  detail: Detail;
 
-  @Output()
-  toggled = new EventEmitter<any>();
 
-  constructor() {}
-
-  getStore() {
-    this.toggled.emit(!this.detailOpen);
-  }
 }

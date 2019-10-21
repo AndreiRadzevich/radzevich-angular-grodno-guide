@@ -1,5 +1,13 @@
 <div class="content-wrapper">
   <div class="wallpaper">
+    <flash-messages></flash-messages>
+    <div class="row">
+      <div class="col-md-6 mx-auto">
+        <div class="card">
+          <div class="card-body">
+            <h1 class="text-center pb-4 pt-3">
+              <span class="text-primary"><i class="fa fa-lock"></i></span> Register
+            </h1>
     <form [formGroup]="loginForm" (ngSubmit)="onSubmit()">
       <div class="form-group">
         <input type="text" class="form-control" name="email" placeholder="Email" formControlName="email">
@@ -20,6 +28,9 @@
         <small>Don't have an account yet? <a routerLink="register">Sign up</a></small>
       </p>
     </form>
-
+          </div>
+        </div>
+      </div>
+    </div>
   </div>
 </div>

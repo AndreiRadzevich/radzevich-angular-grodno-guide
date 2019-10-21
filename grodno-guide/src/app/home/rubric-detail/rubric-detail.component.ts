@@ -14,13 +14,10 @@ import {DetailService} from './detail.service';
 })
 export class RubricDetailComponent implements OnInit  {
   details: Detail;
-  detailOpen: boolean = true;
+  detailOpen = true;
   selectedItem: any = '';
   filterDetails: any[];
-  stop: number = 9;
-  filterState: string;
-
-
+  filterDetailsStore: any[];
 
   constructor(private route: ActivatedRoute, private detailService: DetailService) {}
 
@@ -28,36 +25,37 @@ export class RubricDetailComponent implements OnInit  {
     this.route.data.pipe(pluck('details'))
     .subscribe(
       detail => {
-        this.filterState = detail.filters[0];
         this.details = detail;
         this.detailOpen = true;
-        console.log(this.route.data);
-        this.filterDetails = detail.details.filter((item) => item.image.startsWith('Rest'));
+        this.filterDetails = detail.details.filter((item) => item.image.startsWith(detail.filters[0]));
+        this.filterDetailsStore = this.filterDetails;
       }
     );
   }
 
-  getStore(item) {
+  getStore(item, el: HTMLElement) {
+
     if (this.selectedItem === item) {
       this.selectedItem = '';
       this.detailOpen = true;
     } else {
+
       this.selectedItem = item;
       this.detailOpen = false;
+      setTimeout(() => {
+        el.scrollIntoView({ behavior: 'smooth', block: 'end', inline: 'end' });
+      }, 300);
+    }
     }
 
-  }
-
-    getFilter(filter) {
-    this.filterState = filter;
+  getFilter(filter) {
     this.detailOpen = true;
-    this.stop = 9;
-    this.filterDetails = this.details.details.filter((item: Details) => item.image.startsWith(filter)).slice(0, this.stop);
-    }
-
-    showMore() {
-    this.stop += 9;
-    this.filterDetails = this.details.details.filter((item: Details) => item.image.startsWith(this.filterState)).slice(0, this.stop);
-    }
+    this.filterDetails = this.details.details.filter((item: Details) => item.image.startsWith(filter));
   }
+
+  showMore() {
+    this.detailOpen = true;
+    this.filterDetails = [...this.filterDetails, ...this.filterDetailsStore ];
+  }
+}
 

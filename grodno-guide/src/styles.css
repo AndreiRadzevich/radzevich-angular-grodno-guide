@@ -28,6 +28,10 @@ input{
   cursor: pointer;
   transition: all 0.2s;
 }
+.fa.fa-navicon {
+  color: white;
+  border: none;
+}
 
 
 body {

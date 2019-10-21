@@ -71,44 +71,43 @@ export const details = [
         'title': 'Jane',
         'description': 'blablabla',
       },{
-        'image': 'Cafesgjgjhgfjgh',
-        'title': 'Jane',
-        'description': 'blablabla',
-      },{
-        'image': 'Cafesgjgjhgfjgh',
-        'title': 'Jane',
-        'description': 'blablabla',
-      },{
-        'image': 'Cafesgjgjhgfjgh',
-        'title': 'Jane',
-        'description': 'blablabla',
-      },{
-        'image': 'Cafesgjgjhgfjgh',
-        'title': 'Jane',
-        'description': 'blablabla',
-      },{
-        'image': 'Cafesgjgjhgfjgh',
-        'title': 'Jane',
-        'description': 'blablabla',
-      },{
-        'image': 'Cafesgjgjhgfjgh',
-        'title': 'Jane',
-        'description': 'blablabla',
-      },{
-        'image': 'Cafesgjgjhgfjgh',
-        'title': 'Jane',
-        'description': 'blablabla',
-      },{
-        'image': 'Cafesgjgjhgfjgh',
-        'title': 'Jane',
-        'description': 'blablabla',
-      },{
-        'image': 'Cafesgjgjhgfjgh',
-        'title': 'Jane',
-        'description': 'blablabla',
-      },
-        {
         'image': 'Cafescmbmnbbmm',
+        'title': 'Jane',
+        'description': 'blablabla',
+      },{
+        'image': 'Nightlife',
+        'title': 'Jane',
+        'description': 'blablabla',
+      },{
+        'image': 'Nightlife',
+        'title': 'Jane',
+        'description': 'blablabla',
+      },{
+        'image': 'Nightlife',
+        'title': 'Jane',
+        'description': 'blablabla',
+      },{
+        'image': 'Nightlife',
+        'title': 'Jane',
+        'description': 'blablabla',
+      },{
+        'image': 'Nightlife',
+        'title': 'Jane',
+        'description': 'blablabla',
+      },{
+        'image': 'Nightlife',
+        'title': 'Jane',
+        'description': 'blablabla',
+      },{
+        'image': 'Nightlife',
+        'title': 'Jane',
+        'description': 'blablabla',
+      },{
+        'image': 'Nightlife',
+        'title': 'Jane',
+        'description': 'blablabla',
+      },{
+        'image': 'Nightlife',
         'title': 'Jane',
         'description': 'blablabla',
       }]
@@ -152,6 +151,78 @@ export const details = [
         'image': 'Activities',
         'title': 'Jane Smith',
         'description': 'blablabla',
+      },{
+        'image': 'Attractions',
+        'title': 'Jane Smith',
+        'description': 'blablabla',
+      },{
+        'image': 'Attractions',
+        'title': 'Jane Smith',
+        'description': 'blablabla',
+      },{
+        'image': 'Attractions',
+        'title': 'Jane Smith',
+        'description': 'blablabla',
+      },{
+        'image': 'Attractions',
+        'title': 'Jane Smith',
+        'description': 'blablabla',
+      },{
+        'image': 'Attractions',
+        'title': 'Jane Smith',
+        'description': 'blablabla',
+      },{
+        'image': 'Attractions',
+        'title': 'Jane Smith',
+        'description': 'blablabla',
+      },{
+        'image': 'Attractions',
+        'title': 'Jane Smith',
+        'description': 'blablabla',
+      },{
+        'image': 'Attractions',
+        'title': 'Jane Smith',
+        'description': 'blablabla',
+      },{
+        'image': 'Attractions',
+        'title': 'Jane Smith',
+        'description': 'blablabla',
+      },{
+        'image': 'Shopping',
+        'title': 'Jane Smith',
+        'description': 'blablabla',
+      },{
+        'image': 'Shopping',
+        'title': 'Jane Smith',
+        'description': 'blablabla',
+      },{
+        'image': 'Shopping',
+        'title': 'Jane Smith',
+        'description': 'blablabla',
+      },{
+        'image': 'Shopping',
+        'title': 'Jane Smith',
+        'description': 'blablabla',
+      },{
+        'image': 'Shopping',
+        'title': 'Jane Smith',
+        'description': 'blablabla',
+      },{
+        'image': 'Shopping',
+        'title': 'Jane Smith',
+        'description': 'blablabla',
+      },{
+        'image': 'Shopping',
+        'title': 'Jane Smith',
+        'description': 'blablabla',
+      },{
+        'image': 'Shopping',
+        'title': 'Jane Smith',
+        'description': 'blablabla',
+      },{
+        'image': 'Shopping',
+        'title': 'Jane Smith',
+        'description': 'blablabla',
       }
         ]
     },
@@ -184,23 +255,91 @@ export const details = [
       'description': 'blablabla',
     },{
       'image': 'City',
-      'title': 'Jane Smith',
+      'title': 'Jane',
       'description': 'blablabla',
     },{
       'image': 'City',
-      'title': 'Jane Smith',
+      'title': 'Jane',
       'description': 'blablabla',
     },{
       'image': 'City',
+      'title': 'Jane',
+      'description': 'blablabla',
+    },{
+      'image': 'Nature',
+      'title': 'Jane',
+      'description': 'blablabla',
+    },{
+      'image': 'Nature',
+      'title': 'Jane',
+      'description': 'blablabla',
+    },{
+      'image': 'Nature',
+      'title': 'Jane',
+      'description': 'blablabla',
+    },{
+      'image': 'Nature',
+      'title': 'Jane',
+      'description': 'blablabla',
+    },{
+      'image': 'Nature',
       'title': 'Jane Smith',
       'description': 'blablabla',
     },{
-      'image': 'City',
+      'image': 'Nature',
       'title': 'Jane Smith',
       'description': 'blablabla',
     },{
-      'image': 'City',
+      'image': 'Nature',
       'title': 'Jane Smith',
+      'description': 'blablabla',
+    },{
+      'image': 'Nature',
+      'title': 'Jane Smith',
+      'description': 'blablabla',
+    },{
+      'image': 'Nature',
+      'title': 'Jane ',
+      'description': 'blablabla',
+    },{
+      'image': 'Nature',
+      'title': 'Jane ',
+      'description': 'blablabla',
+    },{
+      'image': 'Region',
+      'title': 'Jane ',
+      'description': 'blablabla',
+    },{
+      'image': 'Region',
+      'title': 'Jane ',
+      'description': 'blablabla',
+    },{
+      'image': 'Region',
+      'title': 'Jane ',
+      'description': 'blablabla',
+    },{
+      'image': 'Region',
+      'title': 'Jane ',
+      'description': 'blablabla',
+    },{
+      'image': 'Region',
+      'title': 'Jane ',
+      'description': 'blablabla',
+    },{
+      'image': 'Region',
+      'title': 'Jane ',
+      'description': 'blablabla',
+    },{
+      'image': 'Region',
+      'title': 'Jane',
+      'description': 'blablabla',
+    },{
+      'image': 'Region',
+      'title': 'Jane',
+      'description': 'blablabla',
+    },{
+      'image': 'Region',
+      'title': 'Jane',
       'description': 'blablabla',
     }
 
@@ -210,10 +349,119 @@ export const details = [
     'filters': ['All', 'Exhibitions', 'Music'],
     'rubric': 'event',
     'details': [{
-      'image': 'Jane Smith',
+      'image': 'All',
       'title': 'Jane Smith',
       'description': 'blablabla',
-    }]
+    },{
+      'image': 'All',
+      'title': 'Jane Smith',
+      'description': 'blablabla',
+    },{
+      'image': 'All',
+      'title': 'Jane Smith',
+      'description': 'blablabla',
+    },{
+      'image': 'All',
+      'title': 'Jane Smith',
+      'description': 'blablabla',
+    },{
+      'image': 'All',
+      'title': 'Jane Smith',
+      'description': 'blablabla',
+    },{
+      'image': 'All',
+      'title': 'Jane Smith',
+      'description': 'blablabla',
+    },{
+      'image': 'All',
+      'title': 'Jane Smith',
+      'description': 'blablabla',
+    },{
+      'image': 'All',
+      'title': 'Jane Smith',
+      'description': 'blablabla',
+    },{
+      'image': 'All',
+      'title': 'Jane Smith',
+      'description': 'blablabla',
+    },{
+      'image': 'Exhibitions',
+      'title': 'Jane Smith',
+      'description': 'blablabla',
+    },{
+      'image': 'Exhibitions',
+      'title': 'Jane Smith',
+      'description': 'blablabla',
+    },{
+      'image': 'Exhibitions',
+      'title': 'Jane Smith',
+      'description': 'blablabla',
+    },{
+      'image': 'Exhibitions',
+      'title': 'Jane Smith',
+      'description': 'blablabla',
+    },{
+      'image': 'Exhibitions',
+      'title': 'Jane Smith',
+      'description': 'blablabla',
+    },{
+      'image': 'Exhibitions',
+      'title': 'Jane Smith',
+      'description': 'blablabla',
+    },{
+      'image': 'Exhibitions',
+      'title': 'Jane Smith',
+      'description': 'blablabla',
+    },{
+      'image': 'Exhibitions',
+      'title': 'Jane Smith',
+      'description': 'blablabla',
+    },{
+      'image': 'Exhibitions',
+      'title': 'Jane Smith',
+      'description': 'blablabla',
+    },{
+      'image': 'Music',
+      'title': 'Jane Smith',
+      'description': 'blablabla',
+    },{
+      'image': 'Music',
+      'title': 'Jane Smith',
+      'description': 'blablabla',
+    },{
+      'image': 'Music',
+      'title': 'Jane Smith',
+      'description': 'blablabla',
+    },{
+      'image': 'Music',
+      'title': 'Jane Smith',
+      'description': 'blablabla',
+    },{
+      'image': 'Music',
+      'title': 'Jane Smith',
+      'description': 'blablabla',
+    },{
+      'image': 'Music',
+      'title': 'Jane Smith',
+      'description': 'blablabla',
+    },{
+      'image': 'Music',
+      'title': 'Jane Smith',
+      'description': 'blablabla',
+    },{
+      'image': 'Music',
+      'title': 'Jane Smith',
+      'description': 'blablabla',
+    },{
+      'image': 'Music',
+      'title': 'Jane Smith',
+      'description': 'blablabla',
+    },{
+      'image': 'Music',
+      'title': 'Jane Smith',
+      'description': 'blablabla',
+    },
+    ]
   }
 ];
 export const rubrics = [

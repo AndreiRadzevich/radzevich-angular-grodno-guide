@@ -1,7 +1,14 @@
 <div class="content-wrapper">
   <div class="wallpaper">
     <div class="panel-body">
-      <h4 class="text-center"><i class="ion-person-add"></i> Sign up</h4>
+      <flash-messages></flash-messages>
+      <div class="row">
+        <div class="col-md-6 mx-auto">
+          <div class="card">
+            <div class="card-body">
+              <h1 class="text-center pb-4 pt-3">
+                <span class="text-primary"><i class="fa fa-lock"></i></span> Login
+              </h1>
       <form [formGroup]="registerForm" (ngSubmit)="onSubmit()">
         <div class="form-group">
           <input type="text" class="form-control form-names input-lg" formControlName="firstName" name="firstName" placeholder="First Name">
@@ -37,3 +44,4 @@
     </div>
   </div>
 </div>
+      </div></div></div></div>

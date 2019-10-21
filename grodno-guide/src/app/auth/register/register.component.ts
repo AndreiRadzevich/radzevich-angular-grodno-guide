@@ -5,6 +5,7 @@ import { first } from 'rxjs/operators';
 
 import { AuthenticationService } from '../authentication.service';
 import { UserService } from '../user.service';
+import {FlashMessagesService} from 'angular2-flash-messages';
 
 @Component({
   selector: 'app-register',
@@ -20,12 +21,9 @@ export class RegisterComponent implements OnInit {
     private formBuilder: FormBuilder,
     private router: Router,
     private authenticationService: AuthenticationService,
-    private userService: UserService
+    private userService: UserService,
+    private flashMessage: FlashMessagesService
   ) {
-
-    if (this.authenticationService.currentUserValue) {
-      this.router.navigate(['/home']);
-    }
   }
 
   ngOnInit() {
@@ -49,14 +47,30 @@ export class RegisterComponent implements OnInit {
     }
 
     this.loading = true;
-    this.userService.register(this.registerForm.value)
-      .pipe(first())
-      .subscribe(
-        data => {
-          this.router.navigate(['/login'], { queryParams: { registered: true }});
-        },
-        error => {
-          this.loading = false;
+    this.authenticationService.register(this.f.email.value, this.f.password.value)
+      .then(res => {
+        this.flashMessage.show('You are now registered and logged in', {
+          cssClass: 'alert-success', timeout: 4000
         });
+        this.router.navigate(['/']);
+      })
+      .catch(err => {
+        this.loading = false;
+        this.flashMessage.show(err.message, {
+          cssClass: 'alert-danger', timeout: 4000
+        });
+      });
   }
 }
+
+
+//   this.userService.register(this.registerForm.value)
+// .pipe(first())
+// .subscribe(
+//     data => {
+//   this.router.navigate(['/login'], { queryParams: { registered: true }});
+// },
+// error => {
+//   this.loading = false;
+// });
+// }
