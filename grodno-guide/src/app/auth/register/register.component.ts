@@ -1,11 +1,11 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
-import { FormBuilder, FormGroup, Validators } from '@angular/forms';
-import { first } from 'rxjs/operators';
 
 import { AuthenticationService } from '../authentication.service';
 import { UserService } from '../user.service';
 import {FlashMessagesService} from 'angular2-flash-messages';
+import {Card} from '../../models/card.interface';
+
 
 @Component({
   selector: 'app-register',
@@ -13,41 +13,26 @@ import {FlashMessagesService} from 'angular2-flash-messages';
   styleUrls: ['./register.component.css']
 })
 export class RegisterComponent implements OnInit {
-  registerForm: FormGroup;
-  loading = false;
-  submitted = false;
-
+  email: string;
+  password: string;
+  client: Card = {
+    id: '',
+    title: '',
+    description: ''
+  };
   constructor(
-    private formBuilder: FormBuilder,
     private router: Router,
     private authenticationService: AuthenticationService,
     private userService: UserService,
-    private flashMessage: FlashMessagesService
+    private flashMessage: FlashMessagesService,
   ) {
   }
 
   ngOnInit() {
-    this.registerForm = this.formBuilder.group({
-      firstName: ['', Validators.required],
-      lastName: ['', Validators.required],
-      email: ['', Validators.required],
-      password: ['', [Validators.required, Validators.minLength(6)]]
-    });
   }
 
-  // convenience getter for easy access to form fields
-  get f() { return this.registerForm.controls; }
-
   onSubmit() {
-    this.submitted = true;
-
-    // stop here if form is invalid
-    if (this.registerForm.invalid) {
-      return;
-    }
-
-    this.loading = true;
-    this.authenticationService.register(this.f.email.value, this.f.password.value)
+    this.authenticationService.register(this.email, this.password)
       .then(res => {
         this.flashMessage.show('You are now registered and logged in', {
           cssClass: 'alert-success', timeout: 4000
@@ -55,22 +40,11 @@ export class RegisterComponent implements OnInit {
         this.router.navigate(['/']);
       })
       .catch(err => {
-        this.loading = false;
         this.flashMessage.show(err.message, {
           cssClass: 'alert-danger', timeout: 4000
         });
       });
+    this.userService.newClient(this.client);
   }
 }
 
-
-//   this.userService.register(this.registerForm.value)
-// .pipe(first())
-// .subscribe(
-//     data => {
-//   this.router.navigate(['/login'], { queryParams: { registered: true }});
-// },
-// error => {
-//   this.loading = false;
-// });
-// }

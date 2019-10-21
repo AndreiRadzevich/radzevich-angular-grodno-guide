@@ -27,6 +27,30 @@ export class AuthenticationService {
       map(auth => auth)
     );
   }
+  // getAuthId() {
+  //   return this.afAuth.authState.subscribe(user => {
+  //     if(user) {
+  //       this.uid = user.uid;
+  //     } else {
+  //       // Empty the value when user signs out
+  //       this.uid = null;
+  //     }
+  //   });
+  // // }
+  //   );
+  // }
+
+
+  // constructor(private afAuth: AngularFireAuth) {
+  //   let uid = this.afAuth.auth.currentUser.uid
+  // }
+
+
+  getIdToken() {
+    return this.afAuth.idToken.pipe(
+      map(id => id)
+    );
+  }
 
   logout() {
     this.afAuth.auth.signOut();

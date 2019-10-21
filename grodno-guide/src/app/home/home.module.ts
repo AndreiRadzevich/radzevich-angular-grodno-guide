@@ -10,6 +10,7 @@ import {SvgBlockComponent} from './rubric-list/svg-block/svg-block.component';
 import {DetailContentComponent} from './rubric-detail/detail-content/detail-content.component';
 import {ContentItemComponent} from './rubric-detail/content-item/content-item.component';
 import { BottonShowMoreComponent } from './botton-show-more/botton-show-more.component';
+import {AuthModule} from '../auth/auth.module';
 
 @NgModule({
   declarations: [
@@ -24,7 +25,8 @@ import { BottonShowMoreComponent } from './botton-show-more/botton-show-more.com
   imports: [
     CommonModule,
     FormsModule,
-    HomeRoutingModule
+    HomeRoutingModule,
+    AuthModule
   ]
 })
 export class HomeModule { }
