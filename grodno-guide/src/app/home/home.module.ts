@@ -11,6 +11,7 @@ import {DetailContentComponent} from './rubric-detail/detail-content/detail-cont
 import {ContentItemComponent} from './rubric-detail/content-item/content-item.component';
 import { BottonShowMoreComponent } from './botton-show-more/botton-show-more.component';
 import {AuthModule} from '../auth/auth.module';
+import { AngularFireDatabaseModule } from 'angularfire2/database';
 
 @NgModule({
   declarations: [
@@ -20,13 +21,15 @@ import {AuthModule} from '../auth/auth.module';
   SvgBlockComponent,
   DetailContentComponent,
   ContentItemComponent,
-  BottonShowMoreComponent
+  BottonShowMoreComponent,
+
   ],
   imports: [
     CommonModule,
     FormsModule,
     HomeRoutingModule,
-    AuthModule
+    AuthModule,
+    AngularFireDatabaseModule
   ]
 })
 export class HomeModule { }
