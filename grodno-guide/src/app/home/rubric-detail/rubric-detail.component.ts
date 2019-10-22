@@ -32,9 +32,7 @@ export class RubricDetailComponent implements OnInit  {
         this.filterDetailsStore = this.filterDetails;
       }
     );
-
-    this.store = this.cardService.getCardList();
-      console.log(this.cardService.getCardList());
+    this.cardService.getCards().subscribe(cards => this.store = cards );
     }
 
   getStore(item, el: HTMLElement) {
@@ -45,7 +43,7 @@ export class RubricDetailComponent implements OnInit  {
     } else {
 
       this.selectedItem = item;
-      // console.log(this.store.title);
+      console.log(this.store);
       this.cardService.createCard(this.selectedItem);
 
       this.detailOpen = false;
