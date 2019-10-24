@@ -12,6 +12,7 @@ import {ContentItemComponent} from './rubric-detail/content-item/content-item.co
 import { BottonShowMoreComponent } from './botton-show-more/botton-show-more.component';
 import {AuthModule} from '../auth/auth.module';
 import { AngularFireDatabaseModule } from 'angularfire2/database';
+import { ViewedCardsComponent } from './viewed-cards/viewed-cards.component';
 
 @NgModule({
   declarations: [
@@ -22,6 +23,7 @@ import { AngularFireDatabaseModule } from 'angularfire2/database';
   DetailContentComponent,
   ContentItemComponent,
   BottonShowMoreComponent,
+  ViewedCardsComponent,
 
   ],
   imports: [

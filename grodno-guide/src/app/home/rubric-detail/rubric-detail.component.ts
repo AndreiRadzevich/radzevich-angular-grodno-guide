@@ -19,7 +19,7 @@ export class RubricDetailComponent implements OnInit  {
   selectedItem: any = '';
   filterDetails: any[];
   filterDetailsStore: any[];
-  store: any;
+
   constructor(private route: ActivatedRoute, private cardService: CardService) {}
 
   ngOnInit() {
@@ -32,7 +32,7 @@ export class RubricDetailComponent implements OnInit  {
         this.filterDetailsStore = this.filterDetails;
       }
     );
-    this.cardService.getCards().subscribe(cards => this.store = cards );
+
     }
 
   getStore(item, el: HTMLElement) {
@@ -41,11 +41,8 @@ export class RubricDetailComponent implements OnInit  {
       this.selectedItem = '';
       this.detailOpen = true;
     } else {
-
       this.selectedItem = item;
-      console.log(this.store);
       this.cardService.createCard(this.selectedItem);
-
       this.detailOpen = false;
       setTimeout(() => {
         el.scrollIntoView({ behavior: 'smooth', block: 'end', inline: 'end' });

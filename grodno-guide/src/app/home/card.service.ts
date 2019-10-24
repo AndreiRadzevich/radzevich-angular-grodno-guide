@@ -14,12 +14,11 @@ export class CardService {
   cardDoc: AngularFirestoreDocument<Card>;
   cards: Observable<Card[]>;
   // cards: Card[];
-  card: Card;
+  // card: Card;
   userId: string;
 
   constructor(private afs: AngularFirestore, private afAuth: AngularFireAuth) {
     this.cardsCollection = this.afs.collection('cards');
-    // this.userId = this.afAuth.auth.currentUser.uid || null;
     this.afAuth.auth.onAuthStateChanged( user => {
       if (user) {
         this.userId =  user.uid;
@@ -27,10 +26,12 @@ export class CardService {
     } });
   }
   createCard(card: Card)  {
-    card.id =  this.userId;
-    this.cardsCollection.add(card);
+    if (this.userId) {
+      card.id =  this.userId;
+      this.cardsCollection.add(card);
+    }
+    return;
   }
-
 
   getCards(): Observable<Card[]> {
     return this.cards;

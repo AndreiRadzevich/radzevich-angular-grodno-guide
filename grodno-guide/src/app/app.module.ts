@@ -1,7 +1,7 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
-import { FormsModule } from '@angular/forms';
+// import { FormsModule } from '@angular/forms';
 
 import { FakeBackendInterceptor } from './fake-back-end/fake-back-end.interceptor';
 
@@ -16,16 +16,14 @@ import { NavbarComponent } from './navbar/navbar.component';
   imports: [
     BrowserModule,
     HttpClientModule,
-    FormsModule,
+    // FormsModule,
     AppRoutingModule,
     HomeModule,
     AuthModule
   ],
   declarations: [
     AppComponent,
-    PageNotFoundComponent,
     NavbarComponent
-
   ],
   bootstrap: [ AppComponent ],
   providers: [
