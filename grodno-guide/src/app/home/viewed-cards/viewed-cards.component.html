@@ -1,1 +1,17 @@
-<div></div>
+<div class="card-header">
+  <span> you've seen</span>
+</div>
+<div class="card-container">
+  <swiper [config]="config">
+    <div class="swiper-wrapper">
+      <div class="swiper-slide" *ngFor="let card of store">
+        <div class="grid-item__title-wrapper" >
+          <p class="grid-item_title">{{ card.title }}</p>
+        </div>
+    </div>
+    </div>
+    <div class="swiper-pagination"></div>
+    <div class="swiper-button-next"></div>
+    <div class="swiper-button-prev"></div>
+  </swiper>
+</div>

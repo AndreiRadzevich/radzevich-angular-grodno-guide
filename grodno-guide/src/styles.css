@@ -411,6 +411,49 @@ img {
   line-height: 30px;
 }
 
+/*cards-container*/
+.card-item {
+  /*background: #ddd;*/
+  /*box-sizing: border-box;*/
+  height: 300px;
+  min-width: 300px;
+  /*color: #fff;*/
+  /*width: 50%;*/
+  /*float: left;*/
+  position: relative;
+  /*background-position: 0 0;*/
+  /*background-repeat: no-repeat;*/
+  /*background-size: cover;*/
+  /*background-color: #fff;*/
+  /*overflow: hidden;*/
+}
+
+.card-item__active {
+  background: rgb(153, 153, 153);
+  opacity: 0.5;
+}
+
+.card-container {
+}
+
+.card-header{
+  height: 50px;
+  background-color: #000;
+  color: #fff;
+}
+
+/*swiper*/
+swiper {
+  height: 300px;
+  width: 100%;
+}
+.swiper-wrapper {
+  box-sizing: border-box;
+}
+:root {
+  --swiper-theme-color: #000000;
+}
+
 /*footer*/
 .footer {
   background-color: #000;

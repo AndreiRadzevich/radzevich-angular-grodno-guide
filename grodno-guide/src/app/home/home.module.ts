@@ -1,8 +1,10 @@
 import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { CommonModule } from '@angular/common';
+import { Angular2UsefulSwiperModule } from 'angular2-useful-swiper';
 
 import { HomeRoutingModule } from './home-routing.module';
+
 import { RubricListComponent } from './rubric-list/rubric-list.component';
 import { RubricDetailComponent } from './rubric-detail/rubric-detail.component';
 import {FilterItemComponent} from './rubric-detail/filter-item/filter-item.component';
@@ -31,7 +33,8 @@ import { ViewedCardsComponent } from './viewed-cards/viewed-cards.component';
     FormsModule,
     HomeRoutingModule,
     AuthModule,
-    AngularFireDatabaseModule
+    AngularFireDatabaseModule,
+    Angular2UsefulSwiperModule
   ]
 })
 export class HomeModule { }

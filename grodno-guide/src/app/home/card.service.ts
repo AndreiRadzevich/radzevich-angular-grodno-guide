@@ -22,7 +22,8 @@ export class CardService {
     this.afAuth.auth.onAuthStateChanged( user => {
       if (user) {
         this.userId =  user.uid;
-        this.cards = this.cardsCollection.valueChanges('cards').pipe(map(cards => cards.filter(card => card.id = this.userId )));
+        console.log(user.uid);
+        this.cards = this.cardsCollection.valueChanges('cards').pipe(map(cards => cards.filter(card => card.id === user.uid ).slice(-6)));
     } });
   }
   createCard(card: Card)  {
