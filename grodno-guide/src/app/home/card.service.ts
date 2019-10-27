@@ -13,19 +13,25 @@ export class CardService {
   cardsCollection: AngularFirestoreCollection<Card>;
   cardDoc: AngularFirestoreDocument<Card>;
   cards: Observable<Card[]>;
-  // cards: Card[];
-  // card: Card;
+  length: number;
   userId: string;
 
   constructor(private afs: AngularFirestore, private afAuth: AngularFireAuth) {
-    this.cardsCollection = this.afs.collection('cards');
     this.afAuth.auth.onAuthStateChanged( user => {
-      if (user) {
-        this.userId =  user.uid;
-        console.log(user.uid);
-        this.cards = this.cardsCollection.valueChanges('cards').pipe(map(cards => cards.filter(card => card.id === user.uid ).slice(-6)));
-    } });
+        if (user) {
+          this.userId =  user.uid;
+          this.cardsCollection = this.afs.collection('cards', ref => ref.where('id', '==', this.userId) );
+          this.cards = this.cardsCollection.valueChanges('cards');
+        }
+    });
+    // this.afAuth.auth.onAuthStateChanged( user => {
+    //   if (user) {
+    //     this.userId =  user.uid;
+    //     this.cardsCollection = this.afs.collection('cards');
+    //     this.cards = this.cardsCollection.valueChanges('cards').pipe(map(cards => cards.filter(card => card.id = this.userId )));
+    //   } });
   }
+
   createCard(card: Card)  {
     if (this.userId) {
       card.id =  this.userId;

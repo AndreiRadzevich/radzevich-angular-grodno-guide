@@ -21,7 +21,7 @@ export class ViewedCardsComponent implements OnInit {
       nextEl: '.swiper-button-next',
       prevEl: '.swiper-button-prev'
     },
-    spaceBetween: 0,
+    spaceBetween: 10,
     breakpoints: {
       640: {
         slidesPerView: 2,
@@ -42,7 +42,7 @@ export class ViewedCardsComponent implements OnInit {
   constructor( private cardService: CardService ) { }
 
   ngOnInit() {
-    this.cardService.getCards().pipe(tap(tt => console.log(tt) )).subscribe(cards => {this.store = cards; } );
+    this.cardService.getCards().subscribe(cards => { this.store = cards; } );
   }
 
 }

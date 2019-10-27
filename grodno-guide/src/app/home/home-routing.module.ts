@@ -5,6 +5,8 @@ import { RubricListComponent } from './rubric-list/rubric-list.component';
 import { RubricDetailComponent } from './rubric-detail/rubric-detail.component';
 
 import { RubricDetailResolverService } from './rubric-detail/rubric-detail.resolver.service';
+import {LoginComponent} from "../auth/login/login.component";
+import {LoginGuard} from "../guard/login.guard";
 
 const homeRoutes: Routes = [
   {
@@ -13,7 +15,7 @@ const homeRoutes: Routes = [
     children: [
       {
         path: ':rubric',
-        component: RubricDetailComponent,
+        component: RubricDetailComponent, canActivate: [LoginGuard],
         resolve: {
           details: RubricDetailResolverService
         }
@@ -35,6 +37,10 @@ const homeRoutes: Routes = [
   ],
   exports: [
     RouterModule
+  ],
+  providers: [
+    LoginGuard,
+    // RegisterGuard
   ]
 })
 export class HomeRoutingModule { }
