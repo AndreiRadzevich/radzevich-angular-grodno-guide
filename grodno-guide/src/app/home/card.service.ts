@@ -40,7 +40,7 @@ export class CardService {
     return;
   }
 
-  getCards(): Observable<Card[]> {
+  getCards(): any {
     return this.cards;
   }
 

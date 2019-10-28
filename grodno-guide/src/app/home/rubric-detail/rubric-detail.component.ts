@@ -32,11 +32,9 @@ export class RubricDetailComponent implements OnInit  {
         this.filterDetailsStore = this.filterDetails;
       }
     );
-
     }
 
   getStore(item, el: HTMLElement) {
-
     if (this.selectedItem === item) {
       this.selectedItem = '';
       this.detailOpen = true;

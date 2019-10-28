@@ -5,7 +5,7 @@ import { RubricListComponent } from './rubric-list/rubric-list.component';
 import { RubricDetailComponent } from './rubric-detail/rubric-detail.component';
 
 import { RubricDetailResolverService } from './rubric-detail/rubric-detail.resolver.service';
-import {LoginComponent} from "../auth/login/login.component";
+import {LoginComponent} from "../auth/login/login/login.component";
 import {LoginGuard} from "../guard/login.guard";
 
 const homeRoutes: Routes = [

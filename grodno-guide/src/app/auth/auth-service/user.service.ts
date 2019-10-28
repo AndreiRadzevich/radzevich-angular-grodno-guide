@@ -4,7 +4,7 @@ import { AngularFirestore, AngularFirestoreCollection, AngularFirestoreDocument 
 import { Observable } from 'rxjs';
 import { map } from 'rxjs/operators';
 
-import { Card } from '../models/card.interface';
+import { Card } from '../../models/card.interface';
 
 
 

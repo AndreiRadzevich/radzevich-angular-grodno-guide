@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { FlashMessagesService } from 'angular2-flash-messages';
-import {AuthenticationService} from '../auth/authentication.service';
+import {AuthenticationService} from '../auth/auth-service/authentication.service';
 
 @Component({
   selector: 'app-navbar',

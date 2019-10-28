@@ -1,17 +1,17 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, EventEmitter, OnInit, Output} from '@angular/core';
 
 import {CardService} from '../card.service';
 
 import {Card} from '../../models/card.interface';
 import {SwiperOptions} from 'swiper';
-import {pipe} from 'rxjs';
-import {tap} from 'rxjs/operators';
+import {AngularFireAuth} from '@angular/fire/auth';
 @Component({
   selector: 'app-viewed-cards',
   templateUrl: './viewed-cards.component.html',
   styleUrls: ['./viewed-cards.component.css']
 })
 export class ViewedCardsComponent implements OnInit {
+
   config: SwiperOptions = {
 
     initialSlide: 3, // Slide Index Starting from 0
@@ -37,12 +37,27 @@ export class ViewedCardsComponent implements OnInit {
       },
   }};
 
-  store: Card[];
+  store: Card[] = [];
+  isVisible = true;
 
-  constructor( private cardService: CardService ) { }
+    @Output() onChanged = new EventEmitter<boolean>();
+      change(card) {
+      this.onChanged.emit(card);
+    }
+
+  constructor( private cardService: CardService, private afAuth: AngularFireAuth ) { }
 
   ngOnInit() {
-    this.cardService.getCards().subscribe(cards => { this.store = cards; } );
+    this.getCards();
   }
 
+  getCards() {
+    this.afAuth.auth.onAuthStateChanged( user => {
+      if (user) {
+        // this.isVisible = true;
+        this.cardService.getCards().subscribe(cards => this.store = cards);
+      }
+    });
+    // this.isVisible = false;
+  }
 }
