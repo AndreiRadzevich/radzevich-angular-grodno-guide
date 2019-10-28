@@ -33,14 +33,17 @@ export class CardService {
   }
 
   createCard(card: Card)  {
+
     if (this.userId) {
       card.id =  this.userId;
       this.cardsCollection.add(card);
     }
+    console.log("снова и снова")
     return;
   }
 
   getCards(): any {
+    console.log("опять и опять")
     return this.cards;
   }
 

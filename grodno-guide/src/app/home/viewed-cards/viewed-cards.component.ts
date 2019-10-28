@@ -5,6 +5,7 @@ import {CardService} from '../card.service';
 import {Card} from '../../models/card.interface';
 import {SwiperOptions} from 'swiper';
 import {AngularFireAuth} from '@angular/fire/auth';
+import {Observable} from "rxjs";
 @Component({
   selector: 'app-viewed-cards',
   templateUrl: './viewed-cards.component.html',
@@ -36,8 +37,9 @@ export class ViewedCardsComponent implements OnInit {
         slidesPerView: 5,
       },
   }};
-
-  store: Card[] = [];
+  isDataLoaded;
+  isLoaded;
+  store: Observable<Card[]>;
   isVisible = true;
 
     @Output() onChanged = new EventEmitter<boolean>();
@@ -48,16 +50,17 @@ export class ViewedCardsComponent implements OnInit {
   constructor( private cardService: CardService, private afAuth: AngularFireAuth ) { }
 
   ngOnInit() {
-    this.getCards();
+    this.store = this.cardService.getCards();
+    console.log('ну да');
   }
 
-  getCards() {
-    this.afAuth.auth.onAuthStateChanged( user => {
-      if (user) {
-        // this.isVisible = true;
-        this.cardService.getCards().subscribe(cards => this.store = cards);
-      }
-    });
-    // this.isVisible = false;
-  }
+  // getCards() {
+  //   this.afAuth.auth.onAuthStateChanged( user => {
+  //     if (user) {
+  //       // this.isVisible = true;
+  //       this.cardService.getCards().subscribe(cards => this.store = cards);
+  //     }
+  //   });
+  //   // this.isVisible = false;
+  // }
 }

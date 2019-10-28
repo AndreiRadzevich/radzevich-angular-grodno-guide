@@ -1,19 +1,22 @@
-<div *ngIf="isVisible">
-<div class="card-header" >
-  <span> you've seen</span>
-</div>
-<div class="card-container" >
-  <swiper [config]="config">
-    <div class="swiper-wrapper">
-      <div class="swiper-slide" *ngFor="let card of store" (click)="change(card)">
-        <div class="grid-item__title-wrapper" >
-          <p class="grid-item_title">{{ card.title }}</p>
-        </div>
-    </div>
-    </div>
-    <div class="swiper-pagination"></div>
-    <div class="swiper-button-next"></div>
-    <div class="swiper-button-prev"></div>
-  </swiper>
-</div>
-</div>
+<div *ngIf="store | async as stor ; else loading">
+<!--    <div *ngIf="(store | async )?.length">-->
+      <div class="card-header" >
+        <span> you've seen</span>
+      </div>
+      <div class="card-container" >
+        <swiper [config]="config">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide" *ngFor="let card of stor" (click)="change(card)">
+              <div class="grid-item__title-wrapper" >
+                <p class="grid-item_title">{{ card.title }}</p>
+              </div>
+            </div>
+          </div>
+          <div class="swiper-pagination"></div>
+          <div class="swiper-button-next"></div>
+          <div class="swiper-button-prev"></div>
+        </swiper>
+<!--      </div>-->
+    </div></div>
+    <ng-template #loading></ng-template>
+
