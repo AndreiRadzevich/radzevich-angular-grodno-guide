@@ -12,7 +12,7 @@ import { map } from 'rxjs/operators';
 export class CardService {
   cardsCollection: AngularFirestoreCollection<Card>;
   cardDoc: AngularFirestoreDocument<Card>;
-  cards: Observable<Card[]>;
+  cards: Card[];
   length: number;
   userId: string;
 
@@ -20,8 +20,8 @@ export class CardService {
     this.afAuth.auth.onAuthStateChanged( user => {
         if (user) {
           this.userId =  user.uid;
-          this.cardsCollection = this.afs.collection('cards', ref => ref.where('id', '==', this.userId) );
-          this.cards = this.cardsCollection.valueChanges('cards');
+          this.cardsCollection = this.afs.collection('cards', ref => ref.where('id', '==', this.userId).limit(7) );
+          this.cardsCollection.valueChanges('cards').subscribe(cards => this.cards = cards);
         }
     });
     // this.afAuth.auth.onAuthStateChanged( user => {
@@ -34,16 +34,18 @@ export class CardService {
 
   createCard(card: Card)  {
 
+    this.cards.unshift(card);
+    if (this.cards.length > 9)  {
+      this.cards.splice(8 );
+    }
     if (this.userId) {
       card.id =  this.userId;
       this.cardsCollection.add(card);
     }
-    console.log("снова и снова")
-    return;
   }
 
   getCards(): any {
-    console.log("опять и опять")
+    console.log("опять и опять");
     return this.cards;
   }
 

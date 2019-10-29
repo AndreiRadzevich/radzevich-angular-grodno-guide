@@ -39,7 +39,7 @@ export class ViewedCardsComponent implements OnInit {
   }};
   isDataLoaded;
   isLoaded;
-  store: Observable<Card[]>;
+  store: Card[];
   isVisible = true;
 
     @Output() onChanged = new EventEmitter<boolean>();
