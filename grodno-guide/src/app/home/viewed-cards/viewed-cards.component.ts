@@ -11,8 +11,8 @@ import {Observable} from "rxjs";
   templateUrl: './viewed-cards.component.html',
   styleUrls: ['./viewed-cards.component.css']
 })
-export class ViewedCardsComponent implements OnInit {
-
+export class ViewedCardsComponent implements OnInit  {
+public reLoad = true;
   config: SwiperOptions = {
 
     initialSlide: 3, // Slide Index Starting from 0
@@ -47,14 +47,21 @@ export class ViewedCardsComponent implements OnInit {
       this.onChanged.emit(card);
     }
 
-  constructor( private cardService: CardService, private afAuth: AngularFireAuth ) { }
+  constructor(  private cardService: CardService, private afAuth: AngularFireAuth ) { }
 
   ngOnInit() {
-    this.store = this.cardService.getCards();
-    console.log('ну да');
+  this.store = this.cardService.getCards();
   }
-
-  // getCards() {
+  // ngAfterContentChecked() {
+  //       this.xdr.detectChanges();
+  //       this.reload();
+  //       console.log('rrr');
+  // }
+private reload() {
+        setTimeout(() => this.reLoad = false);
+        setTimeout(() => this.reLoad = true);
+}
+  // getCards()
   //   this.afAuth.auth.onAuthStateChanged( user => {
   //     if (user) {
   //       // this.isVisible = true;

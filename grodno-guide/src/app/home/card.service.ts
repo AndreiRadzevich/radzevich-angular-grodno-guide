@@ -5,6 +5,7 @@ import {Card} from '../models/card.interface';
 import {AngularFirestore, AngularFirestoreCollection, AngularFirestoreDocument} from '@angular/fire/firestore';
 import {Observable} from 'rxjs';
 import { map } from 'rxjs/operators';
+import {newLineWithIndentation} from "tslint/lib/utils";
 
 @Injectable({
   providedIn: 'root'
@@ -20,7 +21,7 @@ export class CardService {
     this.afAuth.auth.onAuthStateChanged( user => {
         if (user) {
           this.userId =  user.uid;
-          this.cardsCollection = this.afs.collection('cards', ref => ref.where('id', '==', this.userId).limit(7) );
+          this.cardsCollection = this.afs.collection('cards', ref => ref.orderBy('date', 'desc').where('id', '==', this.userId).limit(15) );
           this.cardsCollection.valueChanges('cards').subscribe(cards => this.cards = cards);
         }
     });
@@ -33,21 +34,20 @@ export class CardService {
   }
 
   createCard(card: Card)  {
-
-    this.cards.unshift(card);
-    if (this.cards.length > 9)  {
-      this.cards.splice(8 );
-    }
     if (this.userId) {
       card.id =  this.userId;
+      // this.cards = [...this.cards, card];
+      card.date = new Date();
+      console.log(this.cards);
       this.cardsCollection.add(card);
     }
   }
 
-  getCards(): any {
-    console.log("опять и опять");
-    return this.cards;
+  getCards(): Card[] {
+   return this.cards;
   }
+
+
 
   // updateClient(client: Card) {
   //   this.clientDoc = this.afs.doc(`clients/${client.id}`);
