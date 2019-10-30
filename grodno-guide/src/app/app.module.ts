@@ -9,6 +9,7 @@ import { HomeModule } from './home/home.module';
 import { NavbarComponent } from './navbar/navbar.component';
 import {LoginModule} from './auth/login/login.module';
 import {RegisterModule} from './auth/register/register.module';
+import { ButtonUpComponent } from './button-up/button-up/button-up.component';
 
 @NgModule({
   imports: [
@@ -21,7 +22,8 @@ import {RegisterModule} from './auth/register/register.module';
   ],
   declarations: [
     AppComponent,
-    NavbarComponent
+    NavbarComponent,
+    ButtonUpComponent
   ],
   bootstrap: [ AppComponent ],
   providers: [

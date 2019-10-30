@@ -10,6 +10,11 @@
     [detail]="detailItem" [class.grid-item__active]="selectedItem === detailItem"
     (click)="getStore(detailItem, detailContent)" >
     </app-content-item>
+    <div class="detail-item__close">
+      <button class="close-button">
+        <span class="ion ion-ios-close" [hidden]="detailOpen" (click)="detailOpen = true" ></span>
+      </button>
+    </div>
     <app-detail-content #detailContent [hidden]="detailOpen" [detailInfo]="selectedItem" >
       <span class="" #detailContent>Lorem</span>
     </app-detail-content>

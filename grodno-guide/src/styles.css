@@ -554,6 +554,9 @@ img {
 .text-center{
   text-align: center;
 }
+.ion-ios-close {
+  color: #dddddd;
+}
 
 @media screen and (min-width: 640px) {
   /*.header {*/

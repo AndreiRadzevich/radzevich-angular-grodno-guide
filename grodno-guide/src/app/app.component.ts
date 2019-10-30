@@ -7,4 +7,11 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'grodno-guide';
+
+  onEdit() { // function onEdit
+    window.scrollTo({
+      top: 0,
+      behavior: 'smooth'
+    }); // very top
+  }
 }
