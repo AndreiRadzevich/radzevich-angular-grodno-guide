@@ -2,38 +2,7 @@
 <div id="container">
   <app-navbar></app-navbar>
   <router-outlet></router-outlet>
-  <footer class="footer">
-    <div class="footer__layout">
-      <section class="footer-group">
-        <div class="footer__logo">
-          <img title="Hrodno" src="" alt="Hrodno">
-        </div>
-        <div class="footer__address">
-          <h4>Visit Hrodno</h4>
-          <p>City of Hrodno</p>
-          <p>Box 12321, 23 33 Hrodno</p>
-          <h5>Visiting address</h5>
-          <p>Hrodno Visitir Center</p>
-        </div>
-      </section>
-      <button [ngStyle]="{'scroll-behavior': 'smooth'}" class="md-raised md-primary" (click)="onEdit()">Edit</button>
+  <button [ngStyle]="{'scroll-behavior': 'smooth'}" class="md-raised md-primary" (click)="onEdit()">Edit</button>
+  <app-footer></app-footer>
 
-<!--              <section class="footer__form">-->
-<!--                <form action="" class="footer__letter-form">-->
-<!--                  <fieldset>-->
-<!--                    <legend>получать новости</legend>-->
-<!--                    <div class="footer__letter-input">-->
-<!--                      <input class="footer__letter-input-field" type="text" name="name" placeholder="Имя"-->
-<!--                             autocomplete="off">-->
-<!--                    </div>-->
-<!--                    <div class="footer__letter-input">-->
-<!--                      <input class="footer__letter-input-field" type="email" name="e-mail" placeholder="E-mail"-->
-<!--                             autocomplete="off">-->
-<!--                    </div>-->
-<!--                    <a class="button" role="button" type="submit" tabindex="0" href="#">подписаться</a>-->
-<!--                  </fieldset>-->
-<!--                </form>-->
-<!--              </section>-->
-    </div>
-</footer>
 </div>

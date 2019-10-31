@@ -7,7 +7,7 @@
 </nav>
   <div class="grid-container">
     <app-content-item class="grid-item" *ngFor="let detailItem of filterDetails"
-    [detail]="detailItem" [class.grid-item__active]="selectedItem === detailItem"
+    [detail]="detailItem" [class.grid-item__active]="selectedItem === detailItem"  [style.backgroundImage]="'url(../../assets/images/img1.jpg)'"
     (click)="getStore(detailItem, detailContent)" >
     </app-content-item>
     <div class="detail-item__close">

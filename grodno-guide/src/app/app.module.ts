@@ -9,7 +9,8 @@ import { HomeModule } from './home/home.module';
 import { NavbarComponent } from './navbar/navbar.component';
 import {LoginModule} from './auth/login/login.module';
 import {RegisterModule} from './auth/register/register.module';
-import { ButtonUpComponent } from './button-up/button-up/button-up.component';
+import { FooterComponent } from './footer/footer/footer.component';
+import {SocialComponent} from './social/social.component';
 
 @NgModule({
   imports: [
@@ -23,7 +24,8 @@ import { ButtonUpComponent } from './button-up/button-up/button-up.component';
   declarations: [
     AppComponent,
     NavbarComponent,
-    ButtonUpComponent
+    FooterComponent,
+    SocialComponent
   ],
   bootstrap: [ AppComponent ],
   providers: [
