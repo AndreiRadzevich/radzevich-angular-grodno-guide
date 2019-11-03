@@ -1,30 +1,30 @@
-import { NgModule } from '@angular/core';
-import { RouterModule, Routes } from '@angular/router';
+import {NgModule} from '@angular/core';
+import {RouterModule, Routes} from '@angular/router';
 
-import { RubricListComponent } from './rubric-list/rubric-list.component';
-import { RubricDetailComponent } from './rubric-detail/rubric-detail.component';
+import {RubricNavComponent} from './rubric-nav/rubric-nav.component';
+import {RubricContainerComponent} from './rubric-container/rubric-container.component';
 
-import { RubricDetailResolverService } from './rubric-detail/rubric-detail.resolver.service';
-import {LoginComponent} from "../auth/login/login/login.component";
-import {LoginGuard} from "../guard/login.guard";
+import {RubricContainerResolverService} from './rubric-container/rubric-container.resolver.service';
+
+import {LoginGuard} from '../auth/guard/login.guard';
 
 const homeRoutes: Routes = [
   {
     path: 'home',
-    component: RubricListComponent,
+    component: RubricNavComponent,
     children: [
       {
         path: ':rubric',
-        component: RubricDetailComponent, canActivate: [LoginGuard],
+        component: RubricContainerComponent, canActivate: [LoginGuard],
         resolve: {
-          details: RubricDetailResolverService
+          details: RubricContainerResolverService
         }
-        },
+      },
       {
         path: '',
-        component: RubricDetailComponent,
+        component: RubricContainerComponent,
         resolve: {
-          details: RubricDetailResolverService
+          details: RubricContainerResolverService
         }
       }
     ]
@@ -39,8 +39,8 @@ const homeRoutes: Routes = [
     RouterModule
   ],
   providers: [
-    LoginGuard,
-    // RegisterGuard
+    LoginGuard
   ]
 })
-export class HomeRoutingModule { }
+export class HomeRoutingModule {
+}

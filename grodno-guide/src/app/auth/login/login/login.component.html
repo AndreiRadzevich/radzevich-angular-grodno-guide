@@ -8,11 +8,13 @@
             <h3 class="text-center  pb-4 pt-3"><i class="ion-md-log-in"></i> Login</h3>
             <form (submit)="onSubmit()">
               <div class="form-group">
-                <input type="email" name="email" [(ngModel)]="email" class="form-control input-lg" placeholder="Email" required>
-                <span class="ion ion-ios-at form-control-icon" ></span>
+                <input type="email" name="email" [(ngModel)]="email" class="form-control input-lg" placeholder="Email"
+                       required>
+                <span class="ion ion-ios-at form-control-icon"></span>
               </div>
               <div class="form-group">
-                <input type="password" name="password" [(ngModel)]="password" class="form-control input-lg" placeholder="Password" required>
+                <input type="password" name="password" [(ngModel)]="password" class="form-control input-lg"
+                       placeholder="Password" required>
                 <span class="ion ion-ios-key form-control-icon"></span>
               </div>
               <input type="submit" value="Login" class="btn btn-primary btn-block">

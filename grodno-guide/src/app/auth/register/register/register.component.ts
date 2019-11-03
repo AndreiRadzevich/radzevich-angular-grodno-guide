@@ -1,8 +1,8 @@
-import { Component, OnInit } from '@angular/core';
-import { Router } from '@angular/router';
+import {Component, OnInit} from '@angular/core';
+import {Router} from '@angular/router';
 
-import { AuthenticationService } from '../../auth-service/authentication.service';
-import { UserService } from '../../auth-service/user.service';
+import {AuthenticationService} from '../../auth-service/authentication.service';
+import {UserService} from '../../auth-service/user.service';
 import {FlashMessagesService} from 'angular2-flash-messages';
 import {Card} from '../../../models/card.interface';
 
@@ -20,6 +20,7 @@ export class RegisterComponent implements OnInit {
     title: '',
     description: ''
   };
+
   constructor(
     private router: Router,
     private authenticationService: AuthenticationService,

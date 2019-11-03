@@ -1,9 +1,9 @@
-import { NgModule } from '@angular/core';
+import {NgModule} from '@angular/core';
 import {RouterModule, Routes} from '@angular/router';
 import {RegisterComponent} from './register/register.component';
 
 const authRoutes: Routes = [
-  { path: '', component: RegisterComponent}
+  {path: '', component: RegisterComponent}
 ];
 
 @NgModule({
@@ -12,4 +12,5 @@ const authRoutes: Routes = [
     RouterModule.forChild(authRoutes)
   ]
 })
-export class RegisterRoutingModule { }
+export class RegisterRoutingModule {
+}

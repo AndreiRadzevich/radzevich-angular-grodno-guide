@@ -1,0 +1,8 @@
+<nav class="filter-navigation-wrapper">
+  <ul class="filters">
+    <li class="filters__item" *ngFor="let filter of filters"
+                           (click)="setFilterCards(filter)">
+      <span>{{ filter }}</span>
+    </li>
+  </ul>
+</nav>

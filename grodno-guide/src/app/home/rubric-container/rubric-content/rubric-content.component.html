@@ -1,0 +1,25 @@
+<div class="grid-container">
+  <div class="grid-item" *ngFor="let filterCard of filterCards"
+       [style.backgroundImage]="'url(../../assets/images/img1.jpg)'"
+       (click)="getDetails(filterCard)">
+    <div class="grid-item__title-wrapper">
+      <p class="grid-item_title">{{ filterCard.title }}</p>
+    </div>
+  </div>
+  <div class="detail-item__close">
+    <button class="close-button">
+      <span class="ion ion-ios-close" [hidden]="detailOpen" (click)="detailOpen = true"></span>
+    </button>
+  </div>
+  <app-detail-content [hidden]="detailOpen" [detailInfo]="selectedCards" [detailOpen]="detailOpen">
+  </app-detail-content>
+</div>
+<app-button-show-more class="grid-container" (click)="showMore()">
+</app-button-show-more>
+<app-viewed-cards (onChanged)="getDetails($event)">
+</app-viewed-cards>
+<div [ngStyle]="{'scroll-behavior': 'smooth'}" class="myBtn" appDropdown (click)="scrollTop()">
+  <span class="ion ion-ios-arrow-up"></span>
+</div>
+
+

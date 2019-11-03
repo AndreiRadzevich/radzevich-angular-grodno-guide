@@ -1,9 +1,9 @@
-import { Component, OnInit } from '@angular/core';
-import { Router, ActivatedRoute } from '@angular/router';
-import { FormBuilder, FormGroup, Validators } from '@angular/forms';
-import { FlashMessagesService } from 'angular2-flash-messages';
+import {Component, OnInit} from '@angular/core';
+import {Router, ActivatedRoute} from '@angular/router';
+import {FormBuilder, FormGroup, Validators} from '@angular/forms';
+import {FlashMessagesService} from 'angular2-flash-messages';
 
-import { AuthenticationService } from '../../auth-service/authentication.service';
+import {AuthenticationService} from '../../auth-service/authentication.service';
 
 @Component({
   selector: 'app-login',
