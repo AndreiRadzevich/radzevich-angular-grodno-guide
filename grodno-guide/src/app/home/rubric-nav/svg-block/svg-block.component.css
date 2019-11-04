@@ -1,1 +1,43 @@
+.navigation-item__img {
+  margin: 0 auto;
+  width: 80%;
+  max-width: 72px;
+}
 
+.navigation-item__img svg {
+  transition: background-color .15s linear;
+  border-radius: 50%;
+}
+
+.navigation-item__img svg {
+  max-height: 72px;
+}
+
+svg:not(:root) {
+  overflow: hidden;
+}
+
+.navigation-item__img svg {
+  max-height: 72px;
+  transition: background-color .15s linear;
+  border-radius: 50%;
+}
+
+.navigation-item__img svg path {
+  transition: fill .15s linear, stroke .15s linear;
+}
+
+.navigation-item__title {
+  font-size: 1.125rem;
+  color: #262626;
+  display: block;
+}
+
+.navigation-item__img svg:hover {
+  background-color: black;
+  border-radius: 50%;
+}
+
+.navigation-item__img circle, .navigation-item__img svg:hover {
+  fill: #fff;
+}

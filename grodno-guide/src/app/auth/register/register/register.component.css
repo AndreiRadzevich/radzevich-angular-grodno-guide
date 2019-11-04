@@ -1,0 +1,78 @@
+#registration {
+  background-color: #ffffff;
+  color: black;
+}
+.ion {
+  font-size: 2em;
+}
+
+
+.form-group{
+  margin-bottom: 15px;
+  position: relative;
+}
+.form-control{
+  margin-top: 1.5em;
+  padding-left: 42px;
+  background-color: transparent;
+  background-image: none;
+  display: block;
+  width: 100%;
+  border: transparent;
+  transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;
+}
+
+.form-control-icon{
+  position: absolute;
+  top: 0;
+  left: 0;
+  color: #555;
+  z-index: 2;
+  display: block;
+}
+
+[type=email].form-control, [type=text].form-names, [type=password].form-control {
+  padding-left: 60px;
+  border: transparent;
+  border-radius: 0;
+  box-shadow: inset 0 -1px 0 #dddddd;
+  font-size: 16px;
+}
+
+/*[class^='ion-'] {*/
+/*  font-size: 1.2em;*/
+/*}*/
+
+.btn{
+  text-transform: uppercase;
+  box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
+  transition: all 0.2s;
+  margin-top: 2em;
+  font-weight: normal;
+  text-align: center;
+  vertical-align: middle;
+  cursor: pointer;
+  background-color: black;
+  border: 1px solid transparent;
+  font-size: 13px;
+  border-radius: 0;
+  height: 3em;
+}
+.btn:hover {
+  background-color: #262626;
+  border: 1px solid transparent;
+}
+
+.text-center{
+  text-align: center;
+}
+
+.fa {
+  color: #ffffff;
+}
+input{
+  padding: 0;
+  border: none;
+  cursor: pointer;
+  transition: all 0.2s;
+}

@@ -3,8 +3,8 @@
     <h1 class="wallpaper_title">Welcome to Grodno</h1>
   </div>
 </div>
-<nav class="filter-navigation-wrapper">
-  <ul class="filter-navigation">
+<nav class="navigation-wrapper">
+  <ul class="navigation">
     <li class="navigation-item" *ngFor="let rubricItem of rubrics$ | async">
       <a [routerLink]="[rubricItem.rubric]"
          routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}">

@@ -1,0 +1,44 @@
+.filters {
+  font-size: 0.875rem;
+  padding: 0 0.8em 0.8em;
+  background-color: #e7e8e9;
+  font-weight: lighter;
+  text-align: center;
+}
+
+.filters__item {
+  display: inline-block;
+  border: 1px solid #262626;
+  padding: 0.4em 1em;
+  margin-top: 0.8em;
+  margin-right: 0.8em;
+  background-color: #fff;
+}
+
+.filters__item:hover {
+  background-color: #000000;
+  color: #ffffff;
+}
+
+.filters__item span {
+  pointer-events: none;
+}
+
+@media screen and (min-width: 640px) {
+  .filters {
+    font-size: 1rem;
+    border: none;
+  }
+}
+
+@media screen and (min-width: 960px) {
+  .filters__item {
+    transition: background-color .15s linear;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .filters__item {
+    font-size: 1.125rem;
+  }
+}

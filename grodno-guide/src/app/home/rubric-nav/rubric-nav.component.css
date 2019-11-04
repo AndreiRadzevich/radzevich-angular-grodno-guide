@@ -24,7 +24,7 @@
   color: #000000;
 }
 
-.filter-navigation-wrapper {
+.navigation-wrapper {
   width: 100%;
   position: relative;
   z-index: 2;
@@ -32,18 +32,11 @@
   margin:  0 auto;
 }
 
-.filter-navigation {
+.navigation {
   text-align: center;
   padding: 0;
   background-color: #fff;
 }
-
-/*
-
-
-*/
-
-
 
 .navigation-item {
   width: 23.5%;
@@ -51,8 +44,6 @@
   display: inline-block;
   vertical-align: top;
 }
-
-
 
 .navigation-item a {
   padding: 0;
