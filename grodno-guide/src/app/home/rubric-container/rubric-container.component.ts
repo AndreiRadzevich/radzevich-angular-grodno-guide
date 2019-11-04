@@ -19,8 +19,8 @@ export class RubricContainerComponent implements OnInit {
   ngOnInit() {
     this.route.data.pipe(pluck('details'))
       .subscribe(
-        detail => {
-          this.cardsService.setCards(detail);
+        cards => {
+          this.cardsService.setCards(cards);
         }
       );
   }

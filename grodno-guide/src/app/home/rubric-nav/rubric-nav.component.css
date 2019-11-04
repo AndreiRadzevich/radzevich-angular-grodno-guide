@@ -1,0 +1,94 @@
+.wallpaper {
+  height: 175px;
+  /*height: 602px;*/
+  background-position: 50% 0;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+  overflow: hidden;
+}
+
+.wallpaper_wrapper {
+  position: relative;
+  top: 50%;
+  transform: translateY(-50%);
+  max-width: 90%;
+  margin: 0 auto;
+  text-align: center;
+  color: #fff;
+}
+
+.wallpaper_title {
+  font-size: 2em;
+  font-weight: bold;
+  color: #000000;
+}
+
+.filter-navigation-wrapper {
+  width: 100%;
+  position: relative;
+  z-index: 2;
+  max-width: 1550px;
+  margin:  0 auto;
+}
+
+.filter-navigation {
+  text-align: center;
+  padding: 0;
+  background-color: #fff;
+}
+
+/*
+
+
+*/
+
+
+
+.navigation-item {
+  width: 23.5%;
+  padding: 0;
+  display: inline-block;
+  vertical-align: top;
+}
+
+
+
+.navigation-item a {
+  padding: 0;
+  box-sizing: border-box;
+  display: block;
+  margin: 20px 0;
+}
+
+@media screen and (min-width: 640px) {
+  .wallpaper {
+    height: 380px;
+  }
+
+  .wallpaper_wrapper {
+    margin-top: 25px;
+  }
+
+  .wallpaper_title {
+    font-size: 2.75em;
+    color: #000000;
+  }
+
+  .navigation-item {
+    width: 15%;
+  }
+}
+
+  @media screen and (min-width: 1200px) {
+    .wallpaper  {
+      height: 602px;
+    }
+    .wallpaper_wrapper {
+      padding-bottom: 160px;
+    }
+    .wallpaper_title {
+      font-size: 4.5em;
+      color: #000000;
+    }
+  }

@@ -4,9 +4,6 @@ import { HTTP_INTERCEPTORS } from '@angular/common/http';
 import {FakeBackendInterceptor} from '../fake-back-end/fake-back-end.interceptor';
 import {NavbarComponent} from './navbar/navbar.component';
 import {FooterComponent} from './footer/footer.component';
-import {SocialComponent} from "../shared/social/social.component";
-import {DropdownDirective} from "../shared/dropdown.directive";
-import {CommonModule} from "@angular/common";
 import {RouterModule} from "@angular/router";
 import {SharedModule} from "../shared/shared.module";
 

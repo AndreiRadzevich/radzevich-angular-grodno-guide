@@ -4,7 +4,7 @@ import { Observable } from 'rxjs';
 import { tap } from 'rxjs/operators';
 
 import { Rubric } from '../models/rubric.interface';
-import { Detail } from '../models/detail.interface';
+import { Details } from '../models/detail.interface';
 
 @Injectable({
   providedIn: 'root'
@@ -20,7 +20,7 @@ export class HomeService {
       );
   }
 
-  getFolder(folder: string, endpoint: string): Observable<Detail> {
+  getFolder(folder: string, endpoint: string): Observable<Details> {
     const options = { params: new HttpParams().set('rubric', folder) };
     return this.http
     .get(`/api/${ endpoint }`, options)

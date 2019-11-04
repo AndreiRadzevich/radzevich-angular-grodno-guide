@@ -1,18 +1,16 @@
-<div class="content-wrapper">
-  <div class="wallpaper">
-    <div class="wallpaper_wrapper">
-      <h1 class="wallpaper_title">Welcome to Grodno</h1>
-    </div>
+<div class="wallpaper">
+  <div class="wallpaper_wrapper">
+    <h1 class="wallpaper_title">Welcome to Grodno</h1>
   </div>
-  <nav class="filter-navigation-wrapper">
-    <ul class="filter-navigation">
-      <li class="navigation-item" *ngFor="let rubricItem of rubrics$ | async">
-        <a [routerLink]="[rubricItem.rubric]"
-           routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}">
-          <app-svg-block [rubric]="rubricItem.rubric"></app-svg-block>
-        </a>
-      </li>
-    </ul>
-  </nav>
-  <router-outlet></router-outlet>
 </div>
+<nav class="filter-navigation-wrapper">
+  <ul class="filter-navigation">
+    <li class="navigation-item" *ngFor="let rubricItem of rubrics$ | async">
+      <a [routerLink]="[rubricItem.rubric]"
+         routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}">
+        <app-svg-block [rubric]="rubricItem.rubric"></app-svg-block>
+      </a>
+    </li>
+  </ul>
+</nav>
+<router-outlet></router-outlet>

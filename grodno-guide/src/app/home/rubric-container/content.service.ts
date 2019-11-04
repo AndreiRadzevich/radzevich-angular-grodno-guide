@@ -1,8 +1,8 @@
 import {Injectable} from '@angular/core';
 
-import {Subject} from "rxjs";
+import {Subject} from 'rxjs';
 
-import {Detail} from "../../models/detail.interface";
+import {Details} from '../../models/detail.interface';
 
 @Injectable({
   providedIn: 'root'
@@ -11,7 +11,7 @@ export class ContentService {
   filtersChanged = new Subject();
   filtersCardsChanged = new Subject();
   cards: any;
-  filterCards: any;
+  filterCards: Details[];
 
   setCards(cards) {
     this.cards = cards;

@@ -464,6 +464,7 @@ export const details = [
     ]
   }
 ];
+
 export const rubrics = [
   {
     'rubric': 'eat',

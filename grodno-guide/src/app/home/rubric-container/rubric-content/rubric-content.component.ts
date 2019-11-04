@@ -1,19 +1,20 @@
-import {Component, Input, Output, EventEmitter, OnInit, OnDestroy} from '@angular/core';
-import {Detail} from '../../../models/detail.interface';
+import {Component, OnInit, OnDestroy} from '@angular/core';
+import {Details} from '../../../models/detail.interface';
 import {Subscription} from 'rxjs';
 import {ContentService} from '../content.service';
 import {ViewedCardService} from './viewed-cards/viewed-card.service';
+import {Card} from '../../../models/card.interface';
 
 @Component({
   selector: 'app-rubric-content',
   templateUrl: './rubric-content.component.html',
   styleUrls: ['./rubric-content.component.css']
 })
-export class RubricContentComponent implements OnInit {
-  filterCards: any;
-  selectedCards: any;
+export class RubricContentComponent implements OnInit, OnDestroy {
+  filterCards: Details[];
+  selectedCards: Card;
   detailOpen: boolean = true;
-  filterDetailsStore: any;
+  filterDetailsStore: Details[];
   subscription: Subscription;
 
   constructor(private contentService: ContentService, private viewedCardService: ViewedCardService) {
@@ -33,7 +34,7 @@ export class RubricContentComponent implements OnInit {
 
   getDetails(item) {
     if (this.selectedCards === item) {
-      this.selectedCards = '';
+      this.selectedCards = {};
       this.detailOpen = true;
     } else {
       this.selectedCards = item;
@@ -52,5 +53,9 @@ export class RubricContentComponent implements OnInit {
       top: 0,
       behavior: 'smooth'
     });
+  }
+
+  ngOnDestroy() {
+    this.subscription.unsubscribe();
   }
 }

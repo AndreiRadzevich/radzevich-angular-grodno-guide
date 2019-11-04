@@ -1,5 +1,7 @@
 import {Component, Input, ElementRef, OnChanges} from '@angular/core';
 
+import {Card} from '../../../../models/card.interface';
+
 @Component({
   selector: 'app-detail-content',
   templateUrl: './detail-content.component.html',
@@ -8,7 +10,7 @@ import {Component, Input, ElementRef, OnChanges} from '@angular/core';
 export class DetailContentComponent implements OnChanges {
 
   @Input()
-  detailInfo: any = '';
+  detailInfo: Card;
   @Input()
   detailOpen: boolean;
 

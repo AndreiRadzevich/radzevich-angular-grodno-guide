@@ -1,6 +1,7 @@
 import { Component, OnInit, OnDestroy } from '@angular/core';
 import {ContentService} from "../content.service";
 import {Subscription} from "rxjs";
+import {Details} from '../../../models/detail.interface';
 
 
 @Component({
@@ -10,7 +11,7 @@ import {Subscription} from "rxjs";
 })
 export class RubricFilterComponent implements OnInit, OnDestroy {
 
-  filters: any;
+  filters: string[];
   subscription: Subscription;
 
   constructor(private cardsService: ContentService) { }
@@ -18,7 +19,7 @@ export class RubricFilterComponent implements OnInit, OnDestroy {
   ngOnInit() {
     this.subscription = this.cardsService.filtersChanged
       .subscribe(
-        (cards: any) => {
+        (cards: Details) => {
           this.filters = cards.filters;
         }
       );
