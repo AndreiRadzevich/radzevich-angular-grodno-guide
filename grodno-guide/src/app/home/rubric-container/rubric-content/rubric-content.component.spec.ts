@@ -2,6 +2,8 @@ import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { RubricContentComponent } from './rubric-content.component';
 
+
+
 describe('RubricContentComponent', () => {
   let component: RubricContentComponent;
   let fixture: ComponentFixture<RubricContentComponent>;
@@ -23,3 +25,7 @@ describe('RubricContentComponent', () => {
     expect(component).toBeTruthy();
   });
 });
+
+
+
+

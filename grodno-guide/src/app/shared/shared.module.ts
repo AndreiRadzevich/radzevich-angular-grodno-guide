@@ -1,18 +1,18 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 
-import {DropdownDirective} from './dropdown.directive';
+import {ScrollUpDirective} from './scrollUp.directive';
 import {SocialComponent} from './social/social.component';
 
 @NgModule({
   declarations: [
     SocialComponent,
-    DropdownDirective,
+    ScrollUpDirective,
   ],
   imports: [CommonModule],
   exports: [
     SocialComponent,
-    DropdownDirective,
+    ScrollUpDirective,
     CommonModule
   ],
 })

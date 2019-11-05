@@ -14,16 +14,16 @@ export class RubricFilterComponent implements OnInit, OnDestroy {
   filters: string[];
   subscription: Subscription;
 
-  constructor(private cardsService: ContentService) { }
+  constructor(private contentService: ContentService) { }
 
   ngOnInit() {
-    this.subscription = this.cardsService.filtersChanged
+    this.subscription = this.contentService.filtersChanged
       .subscribe(
         (cards: Details) => {
           this.filters = cards.filters;
         }
       );
-    this.filters = this.cardsService.getFilters();
+    this.filters = this.contentService.getFilters();
   }
 
   ngOnDestroy() {
@@ -31,6 +31,6 @@ export class RubricFilterComponent implements OnInit, OnDestroy {
   }
 
   setFilterCards(filter) {
-    this.cardsService.setFilterCards(filter);
+    this.contentService.setFilterCards(filter);
   }
 }

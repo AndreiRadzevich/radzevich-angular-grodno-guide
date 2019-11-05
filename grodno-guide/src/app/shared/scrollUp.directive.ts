@@ -2,9 +2,9 @@ import {Directive, ElementRef, HostListener} from '@angular/core';
 
 
 @Directive({
-  selector: '[appDropdown]'
+  selector: '[appscrollUp]'
 })
-export class DropdownDirective {
+export class ScrollUpDirective {
 
   constructor(private el: ElementRef) {
   }
