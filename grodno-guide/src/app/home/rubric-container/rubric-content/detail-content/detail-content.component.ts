@@ -1,4 +1,4 @@
-import {Component, Input, ElementRef, OnChanges} from '@angular/core';
+import {Component, Input, ElementRef, OnChanges, ContentChild} from '@angular/core';
 
 import {Card} from '../../../../models/card.interface';
 
@@ -14,6 +14,9 @@ export class DetailContentComponent implements OnChanges {
   @Input()
   detailOpen: boolean;
 
+  @ContentChild('spanElement', {static: false})
+  span: ElementRef;
+
   constructor(private el: ElementRef) {
   }
 
@@ -21,7 +24,8 @@ export class DetailContentComponent implements OnChanges {
     if (!this.detailOpen) {
       setTimeout(() => {
         this.el.nativeElement.scrollIntoView({behavior: 'smooth', block: 'end', inline: 'end'});
-      }, 300);
+        console.log(this.span.nativeElement.textContent);
+        }, 300);
     }
   }
 }

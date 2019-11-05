@@ -21,6 +21,7 @@ export class ViewedCardService {
         this.cardsCollection = this.afs.collection('cards', ref => ref.orderBy('date', 'desc').where('id', '==', this.userId).limit(15));
         this.cardsCollection.valueChanges('cards').subscribe(cards => {
           this.cards = cards;
+          console.log(this.cards);
         });
       }
     });

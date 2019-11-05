@@ -34,3 +34,5 @@ export class RubricFilterComponent implements OnInit, OnDestroy {
     this.contentService.setFilterCards(filter);
   }
 }
+
+

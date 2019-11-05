@@ -12,13 +12,14 @@
     </button>
   </div>
   <app-detail-content [hidden]="detailOpen" [detailInfo]="selectedCards" [detailOpen]="detailOpen">
+    <span #spanElement>{{selectedCards?.description}}</span>
   </app-detail-content>
 </div>
 <app-button-show-more class="grid-container" (click)="showMore()">
 </app-button-show-more>
 <app-viewed-cards (onChanged)="getDetails($event)">
 </app-viewed-cards>
-<div [ngStyle]="{'scroll-behavior': 'smooth'}" class="myBtn" scrollUp (click)="scrollTop()">
+<div [ngStyle]="{'scroll-behavior': 'smooth'}" class="myBtn" appscrollUp (click)="scrollTop()">
   <span class="ion ion-ios-arrow-up"></span>
 </div>
 

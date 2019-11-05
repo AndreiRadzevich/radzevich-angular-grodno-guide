@@ -16,10 +16,12 @@ export class RubricNavComponent implements OnInit {
   }
 
   ngOnInit() {
-    this.rubrics$ = this.getRubrics('rubric');
+
+    this.rubrics$ =  this.getRubrics('rubric');
+
   }
 
   getRubrics(endpoint: string) {
-    return this.homeService.getRubrics(endpoint);
+    return this.homeService.getRubrics(endpoint) ;
   }
 }
