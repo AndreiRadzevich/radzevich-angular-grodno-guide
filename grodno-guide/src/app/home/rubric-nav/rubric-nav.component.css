@@ -1,9 +1,9 @@
 .wallpaper {
   height: 175px;
-  /*height: 602px;*/
-  background-position: 50% 0;
+  background-position: 50% 20%;
   background-repeat: no-repeat;
   background-size: cover;
+  background-image: url("../../../assets/images/wallpapper-grodno.jpg");
   position: relative;
   overflow: hidden;
 }
@@ -21,7 +21,7 @@
 .wallpaper_title {
   font-size: 2em;
   font-weight: bold;
-  color: #000000;
+  color: #ffffff;
 }
 
 .navigation-wrapper {
@@ -29,7 +29,7 @@
   position: relative;
   z-index: 2;
   max-width: 1550px;
-  margin:  0 auto;
+  margin: 0 auto;
 }
 
 .navigation {
@@ -49,12 +49,16 @@
   padding: 0;
   box-sizing: border-box;
   display: block;
-  margin: 20px 0;
+  margin: 1.25em 0;
+}
+
+.social-top {
+  display: none;
 }
 
 @media screen and (min-width: 640px) {
   .wallpaper {
-    height: 380px;
+    height: 275px;
   }
 
   .wallpaper_wrapper {
@@ -63,23 +67,38 @@
 
   .wallpaper_title {
     font-size: 2.75em;
-    color: #000000;
   }
 
   .navigation-item {
     width: 15%;
   }
+
+  .social-top {
+    display: block;
+    width: 280px;
+    position: absolute;
+    right: 0;
+    top: 10px;
+    margin-top: 28px;
+  }
 }
 
-  @media screen and (min-width: 1200px) {
-    .wallpaper  {
-      height: 602px;
-    }
-    .wallpaper_wrapper {
-      padding-bottom: 160px;
-    }
-    .wallpaper_title {
-      font-size: 4.5em;
-      color: #000000;
-    }
+@media screen and (min-width: 1200px) {
+  .wallpaper {
+    height: 500px;
   }
+
+  .wallpaper_wrapper {
+    padding-bottom: 160px;
+  }
+
+  .wallpaper_title {
+    font-size: 4.5em;
+  }
+
+  .navigation-wrapper {
+    padding: 0 60px;
+    box-sizing: border-box;
+    margin: -200px auto 0;
+  }
+}

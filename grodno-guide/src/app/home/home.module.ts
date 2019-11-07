@@ -14,7 +14,6 @@ import {ButtonShowMoreComponent} from './rubric-container/rubric-content/buttons
 import {AngularFireDatabaseModule} from 'angularfire2/database';
 import {ViewedCardsComponent} from './rubric-container/rubric-content/viewed-cards/viewed-cards.component';
 import {RubricFilterComponent} from './rubric-container/rubric-filter/rubric-filter.component';
-import {ButtonScrollTopComponent} from './rubric-container/rubric-content/buttons/button-scroll-top/button-scroll-top.component';
 import {SharedModule} from '../shared/shared.module';
 
 
@@ -28,7 +27,6 @@ import {SharedModule} from '../shared/shared.module';
     ButtonShowMoreComponent,
     ViewedCardsComponent,
     RubricFilterComponent,
-    ButtonScrollTopComponent
 
   ],
   imports: [

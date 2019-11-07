@@ -2,7 +2,7 @@ import {Directive, ElementRef, HostListener} from '@angular/core';
 
 
 @Directive({
-  selector: '[appscrollUp]'
+  selector: '[appScrollUp]'
 })
 export class ScrollUpDirective {
 

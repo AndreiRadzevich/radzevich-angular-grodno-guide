@@ -14,7 +14,6 @@ export class RubricContentComponent implements OnInit, OnDestroy {
   filterCards: Details[];
   selectedCards: Card;
   detailOpen: boolean = true;
-  filterDetailsStore: Details[];
   subscription: Subscription;
 
   constructor(private contentService: ContentService, private viewedCardService: ViewedCardService) {
@@ -27,9 +26,7 @@ export class RubricContentComponent implements OnInit, OnDestroy {
           this.filterCards = filterCards;
         }
       );
-
     this.filterCards = this.contentService.getFilterCards();
-    this.filterDetailsStore = [...this.filterCards];
   }
 
   getDetails(item) {
@@ -45,7 +42,7 @@ export class RubricContentComponent implements OnInit, OnDestroy {
 
   showMore() {
     this.detailOpen = true;
-    this.filterCards = [...this.filterCards, ...this.filterDetailsStore];
+    this.filterCards = [...this.filterCards, ...this.filterCards.slice(-9)];
   }
 
   scrollTop() {

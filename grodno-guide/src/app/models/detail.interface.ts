@@ -1,5 +1,5 @@
 export interface Details {
-  filters: [];
+  filters: string[];
   rubric: string;
-  details: [];
+  details: string[];
 }

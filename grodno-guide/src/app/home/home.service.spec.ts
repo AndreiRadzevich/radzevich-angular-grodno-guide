@@ -75,5 +75,4 @@ describe('HomeService', () => {
         expect(result).toEqual(details);
       });
   });
-
 });

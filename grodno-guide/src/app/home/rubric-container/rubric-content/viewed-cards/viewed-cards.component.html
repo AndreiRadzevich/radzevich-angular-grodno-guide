@@ -5,9 +5,9 @@
   <div class="card-container">
     <swiper [config]="config">
       <div class="swiper-wrapper">
-        <div class="swiper-slide" *ngFor="let card of store" (click)="change(card)">
+        <div class="swiper-slide" *ngFor="let card of store" (click)="change(card)" [style.backgroundImage]="'url(../../assets/images/' +  card.image +')'">
           <div class="grid-item__title-wrapper">
-            <p class="grid-item_title">{{ card.title }}</p>
+            <p class="grid-item__title">{{ card.title }}</p>
           </div>
         </div>
       </div>

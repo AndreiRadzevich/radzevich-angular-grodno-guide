@@ -2,36 +2,15 @@
   border-radius: 0;
 }
 .card-item {
-  /*background: #ddd;*/
-  /*box-sizing: border-box;*/
   height: 300px;
   min-width: 300px;
-  /*color: #fff;*/
-  /*width: 50%;*/
-  /*float: left;*/
   position: relative;
-  /*background-position: 0 0;*/
-  /*background-repeat: no-repeat;*/
-  /*background-size: cover;*/
-  /*background-color: #fff;*/
-  /*overflow: hidden;*/
+
 }
 
 #login {
   background-color: transparent;
 }
-/*.btn{*/
-/*  border: 1px solid #ffffff;*/
-/*  cursor: pointer;*/
-/*  margin-left: 10px;*/
-/*  border-radius: 3px;*/
-/*  padding: 0 13px;*/
-/*  height: 32px;*/
-/*  font-size: 16px;*/
-/*  display: inline-flex;*/
-/*  align-items: center;*/
-/*  transition: border 0.25s cubic-bezier(0.645, 0.045, 0.355, 1) 0s;*/
-/*}*/
 
 input{
   padding: 0;
@@ -40,21 +19,14 @@ input{
   transition: all 0.2s;
 }
 
-
-
-
 #registration {
   background-color: #ffffff;
   color: black;
-}
-img {
-  /*max-width: 100%;*/
 }
 
 .ion {
   font-size: 2em;
 }
-
 
 .form-group{
   margin-bottom: 15px;

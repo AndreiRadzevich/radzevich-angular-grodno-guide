@@ -1,4 +1,4 @@
-.card-header{
+.card-header {
   height: 50px;
   background-color: #000;
   color: #fff;
@@ -13,22 +13,26 @@
   box-sizing: border-box;
   z-index: 1;
   pointer-events: none;
-  background: linear-gradient(180deg,transparent 0,rgba(0,0,0,.45) 43%,rgba(0,0,0,.75));
+  background: linear-gradient(180deg, transparent 0, rgba(0, 0, 0, .45) 43%, rgba(0, 0, 0, .75));
 }
 
 .grid-item__title {
   font-size: 1.125rem;
   width: 100%;
   word-break: break-word;
+  color: #ffffff;
 }
+
 /*swiper*/
 swiper {
   height: 300px;
   width: 100%;
 }
+
 .swiper-wrapper {
   box-sizing: border-box;
 }
+
 :root {
   --swiper-theme-color: #000000;
 }
