@@ -22,5 +22,11 @@
 }
 
 .social-icons a {
-  margin-left: 2em;
+  margin-left: 1em;
+}
+
+@media screen and (min-width: 1200px) {
+  .social-icons a {
+    margin-left: 2em;
+  }
 }
