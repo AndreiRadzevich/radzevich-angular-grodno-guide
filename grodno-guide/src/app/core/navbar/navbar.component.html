@@ -4,14 +4,14 @@
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarMain">
 <i class="fa fa-navicon"></i>
     </button>
-    <div class="collapse navbar-collapse" id="navbarMain">
-      <ul class="navbar-nav ml-auto">
-        <li *ngIf="!isLoggedIn && showRegister" class="nav-item">
-          <a routerLink="/login" class="nav-link mr-3 fa-border">
+    <div class="collapse navbar-collapse " id="navbarMain">
+      <ul class="navbar-nav ml-auto ">
+        <li *ngIf="!isLoggedIn && showRegister" class="nav-item pb-2">
+          <a routerLink="/login" class="nav-link mr-3">
             <span class="text-white">Sign in</span> </a>
         </li>
-        <li *ngIf="!isLoggedIn && showRegister" class="nav-item ">
-          <a routerLink="/register" class="nav-link fa-border">
+        <li *ngIf="!isLoggedIn && showRegister" class="nav-item">
+          <a routerLink="/register" class="nav-link">
             <span class="text-white">Sign up</span>
           </a>
         </li>
@@ -21,7 +21,7 @@
             </a>
         </li>
         <li *ngIf="isLoggedIn" class="nav-item ">
-          <a href="#" (click)="onLogoutClick()" class="nav-link fa-border">
+          <a href="#" (click)="onLogoutClick()" class="nav-link">
             <span class="text-white">Sign out</span>
           </a>
         </li>

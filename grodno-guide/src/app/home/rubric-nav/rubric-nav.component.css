@@ -56,6 +56,11 @@
   display: none;
 }
 
+.btn:focus, .btn:active {
+  outline: none !important;
+  box-shadow: none !important;
+}
+
 @media screen and (min-width: 640px) {
   .wallpaper {
     height: 275px;
@@ -73,14 +78,19 @@
     width: 15%;
   }
 
+
+}
+
+@media screen and (min-width: 992px) {
   .social-top {
     display: block;
-    width: 280px;
+    width: 230px;
     position: absolute;
     right: 0;
     top: 10px;
     margin-top: 28px;
   }
+
 }
 
 @media screen and (min-width: 1200px) {
@@ -100,5 +110,8 @@
     padding: 0 60px;
     box-sizing: border-box;
     margin: -200px auto 0;
+  }
+  .social-top {
+    width: 280px;
   }
 }

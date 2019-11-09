@@ -1,3 +1,8 @@
 .nav-item {
   color: #ffffff; !important;
 }
+.btn:focus, .btn:active {
+  outline: none !important;
+  box-shadow: none !important;
+}
+

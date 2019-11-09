@@ -7,9 +7,10 @@ import {Directive, ElementRef, HostListener} from '@angular/core';
 export class ScrollUpDirective {
 
   constructor(private el: ElementRef) {
+
   }
 
-  @HostListener('window:scroll', ['$event'])
+  @HostListener('window:scroll')
   onWindowScroll() {
     const pageYOffset = window.pageYOffset;
     if (pageYOffset < 1000) {
