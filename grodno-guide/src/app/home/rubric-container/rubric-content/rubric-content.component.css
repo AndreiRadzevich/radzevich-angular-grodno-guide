@@ -155,7 +155,7 @@
 }
 
 .detail-item__close .close-button {
-  background: none;
+  background: black;
   border: none;
   height: 2em;
   width: 100%;

@@ -21,7 +21,7 @@ export class ViewedCardsComponent implements OnInit {
       nextEl: '.swiper-button-next',
       prevEl: '.swiper-button-prev'
     },
-    spaceBetween: 10,
+    spaceBetween: 0,
     breakpoints: {
       640: {
         slidesPerView: 2,

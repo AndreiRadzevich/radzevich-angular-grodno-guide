@@ -15,7 +15,7 @@ import {AngularFireDatabaseModule} from 'angularfire2/database';
 import {ViewedCardsComponent} from './rubric-container/rubric-content/viewed-cards/viewed-cards.component';
 import {RubricFilterComponent} from './rubric-container/rubric-filter/rubric-filter.component';
 import {SharedModule} from '../shared/shared.module';
-
+import {CoreModule} from '../core/core.module';
 
 @NgModule({
   declarations: [
@@ -27,13 +27,13 @@ import {SharedModule} from '../shared/shared.module';
     ButtonShowMoreComponent,
     ViewedCardsComponent,
     RubricFilterComponent,
-
   ],
   imports: [
     CommonModule,
     FormsModule,
     HomeRoutingModule,
     SharedModule,
+    CoreModule,
     AngularFireDatabaseModule,
     Angular2UsefulSwiperModule
   ]
